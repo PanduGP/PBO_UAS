@@ -1,0 +1,1589 @@
+[ TIME: Sun Jan 11 10:45:41 ICT 2015 ]
+% com.mckoi.database.DatabaseException: The insert data list varies in size.
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:118)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO products VALUES
+('HIU516', 'Nafsu Makan Herbal Indo Utama', 'HIU', 4000,1000),
+('HIU517', 'Neo_Tensi (Mencegah dan Mengobati Darah Tinggi)', 'HIU', 45000,100),
+('HIU518', 'Neuro Herba (Stroke)', 'HIU', 55000,100),
+('HIU519', 'Papua Sarang Semut Herbal Indo Utama', 'HIU', 75000,100),
+('HIU520', 'Pro Koles (Menurunkan Kolesterol Tinggi dan Menceg', 'HIU', 45000,100),
+('HIU521', 'PROSAMURA', 'HIU', 45000,100),
+('HIU522', 'Prostat Herbal Indo Utama', 'HIU', 45000,100),
+('HIU523', 'SAMURATIK', 'HIU', 55000,100),
+('HIU524', 'Sari Kurma Gold Thibbuna', 'HIU', 3000,1000),
+('HIU525', 'Superfood Spirulins', 'HIU', 6000,1000),
+('HIU526', 'Zaitun Oil Thibbuna isi 100 Kapsul', 'HIU', 25000,100),
+('HIU527', 'Zaitun Oil Thibbuna isi 210 Kapsul', 'HIU', 44000,100),
+('HPN137', 'Air Hajar Sa''adah 3 ml El Hanif', 'HPN', 65000,100),
+('HPN138', 'Minyak Alami Tongkat Satria (Untuk Suami)', 'HPN', 8000,1000),
+('HPN139', 'Minyak Bulus El-Hanif', 'HPN', 25000,100),
+('HPN140', 'Obat Luka Jempolan (Obat Luka Diabetes)', 'HPN', 35000,100),
+('HPN141', 'Tongkat Gurah ''V'' El-Hanif', 'HPN', 75000,100),
+('IKM564', 'HabbaGarlic 99 isi 200 kapsul Cap Unta Merah', 'IKM', 85000,100),
+('IKM565', 'HabbaGarlic 99 isi 90 kapsul Cap Unta Merah', 'IKM', 45000,100),
+('IKM566', 'Habbat plus Sirsak isi 200 kapsul Cap Onta Merah', 'IKM', 9000,1000),
+('IKM567', 'Kapsul Gamat Emas (Nutrifit) Kharisma isi 60 Kapsu', 'IKM', 92000,100),
+('IKM568', 'Kapsul Sirih Merah Oil Kharisma', 'IKM', 6000,1000),
+('IKM569', 'Kapsul Spirulina Kharisma isi 60 Kapsul', 'IKM', 7000,1000),
+('IKM570', 'Madu Anak Plus Plus', 'IKM', 24000,100),
+('IKM571', 'Madu Bunga Habbatussauda (Mesir) 370 gram', 'IKM', 75000,100),
+('IKM572', 'Madu Penurun Panas Kharisma', 'IKM', 22000,100),
+('IKM573', 'Madu Plus Sambung Nyawa', 'IKM', 45000,100),
+('IKM574', 'Madu Special Diabetes Kharisma', 'IKM', 45000,100),
+('IKM575', 'Tablet Spirulina Kharisma Isi 250', 'IKM', 8000,1000),
+('IMA142', 'Coffe Habasy Ginseng ( 18 in 1)', 'IMA', 25000,100),
+('IMA143', 'Kopi Plus Lingzhi (Rendah Kafein, Atasi Kanker)', 'IMA', 5000,1000),
+('IMA144', 'Madu Batuk El Iman 175 gram', 'IMA', 3000,1000),
+('IMA145', 'Madu Thypus El Iman', 'IMA', 55000,100),
+('INI016', 'Fito Herba 50 kapsul Zakyaa (Menurunkan Kolesterol', 'INI', 0),
+('INI017', 'Power Zip 50 Kaplet Zakyaa (Meningkatkan Daya Taha', 'INI', 0),
+('INI018', 'Priaku Prima Joss Plus Kopi Luwak', 'INI', 75000,100),
+('INI019', 'Shampo Olive Oil + Aloe Vera 100 ml Zakyaa', 'INI', 26000,100),
+('INI020', 'Yuva 50 kapsul Zakya (Menjaga Keremajaan Kulit)', 'INI', 0),
+('JAS025', 'ANTITOXIN Plus (Herba Detoxifikasi)', 'JAS', 75000,100),
+('JAS029', 'Herba Stroke Jasarama', 'JAS', 6000,1000),
+('JAS033', 'Teh Celup Hijau Asli Cap Daun Mas Jasarama', 'JAS', 2000,1000),
+('JAS037', 'Teh Celup Mengkudu Jasarama', 'JAS', 3000,1000),
+('JAS041', 'Teh Celup Sirih Jasarama', 'JAS', 3000,1000),
+('JFI044', 'Madu Anak Jasmine X-Tra Propolis 7 In 1 isi 150 gr', 'JFI', 25000,100),
+('JFI045', 'Madu Asmafas (Asma & Sesak Nafas) 150 gr', 'JFI', 25000,100),
+('JFI046', 'Madu Balita Jasmine X-Tra Propolis', 'JFI', 12500,100),
+('JFI047', 'Madu Hitam Pahit 3 In 1 DIABET isi 350 gr', 'JFI', 6000,1000),
+('JFI048', 'Madu Ostofos (Osteoporosis) isi 350 gr', 'JFI', 6000,1000),
+('JFI049', 'Madu Probiotik (Flek & Batuk) 150gr', 'JFI', 25000,100),
+('JFI050', 'Madu Putih Jasmine (Royal Jelly & Bee Pollen) 350 ', 'JFI', 5000,1000),
+('JFM027', 'Herba Meniran Plus Jasarama', 'JFM', 6000,1000),
+('JFM031', 'Teh Celup Daun Sirsak Jasarama', 'JFM', 32000,100),
+('JFM035', 'Teh Celup Kulit Manggis Jasarama', 'JFM', 35000,100),
+('JFM039', 'Teh Celup Pegagan Plus Jasarama', 'JFM', 3000,1000),
+('JFM043', 'Teh Hijau Asli Cap Daun Mas 75 gram Jasarama', 'JFM', 15000,100),
+('KHO042', 'Madu Hitam Sumbawa Al Khodry', 'KHO', 75000,100),
+('KHO043', 'Minyak Kemiri Premium Al Khodry', 'KHO', 25000,100),
+('KIA025', 'Air Hajar Sa''adah/Jahannam Mesir 3 ml Al Kautsar', 'KIA', 65000,100),
+('KIA026', 'BILQIS CREAM (Pemutih Ketiak dan Selangkangan)', 'KIA', 55000,100),
+('KIA027', 'Breast Up Cream (Pengencang Payudara)', 'KIA', 85000,100),
+('KIA028', 'Ekstrak Tribulus Gold Terrestris', 'KIA', 5000,1000),
+('KIA029', 'Hajar Sa''adah Black Stone With Aroma Teraphy', 'KIA', 9000,1000),
+('KIA030', 'Herbal Axilla (Penghilang Bau Badan)', 'KIA', 35000,100),
+('KIA031', 'Humairo Cream Nature', 'KIA', 35000,100),
+('KIA032', 'Kopi Sulthon 7 in 1 (Kopinya Keluarga Harmonis)', 'KIA', 1000,10000),
+('KIA033', 'Ladies Whitening Cream (Pemutih Wajah dan Leher)', 'KIA', 45000,100),
+('KIA034', 'Long Big Enlargement X Nature Oil 6 ml', 'KIA', 2000,10000),
+('KIA035', 'Minyak Bulus Al Kautsar', 'KIA', 25000,100),
+('KIA036', 'Minyak Bulus Plus Al Kautsar', 'KIA', 3000,1000),
+('KIA037', 'Minyak Gosok Sumbawa Asli', 'KIA', 5000,1000),
+('KIA038', 'Permanent Penis Enlargement (Natural Oil)', 'KIA', 12000,1000),
+('KIA039', 'Pil Manjakani (Female Solution)', 'KIA', 95000,100),
+('KIA040', 'Squalene Cream (Cerahkan Kulit Wajah)', 'KIA', 35000,100),
+('KIA041', 'Tongkat Gurah Vagina Super (TGV Super)', 'KIA', 75000,100),
+('KZU576', 'Alat Bekam Biru Kang Zhu 12 Cups', 'KZU', 17000,1000),
+('KZU577', 'Alat Bekam Biru Kang Zhu 24 Cups', 'KZU', 29000,1000),
+('KZU578', 'Alat Bekam Biru Kang Zhu 6 Cups', 'KZU', 9000,1000),
+('KZU579', 'Alat Bekam Kuning Kang Zhu 14 Cups', 'KZU', 32000,1000),
+('KZU580', 'Alat Bekam Kuning Kang Zhu 8 Cups', 'KZU', 2000,10000),
+('MAB064', 'OSaGi (Obat Sakit Gigi)', 'MAB', 35000,100),
+('MAB065', 'OSARI (Obat Sariawan dan Panas Dalam)', 'MAB', 35000,100),
+('MBR017', 'Eury - X (Madu Ginseng Pasak Bumi) Al Mabruroh', 'MBR', 65000,100),
+('MBR018', 'Madu For Mama (Untuk Ibu Menyusui) Al Mabruroh', 'MBR', 6000,1000),
+('MBR019', 'Madu Ibu Hamil Al Mabruroh', 'MBR', 55000,100),
+('MBR020', 'Madu Lebah Emas Bioflavonoid Al Mabruroh', 'MBR', 6000,1000),
+('MBR021', 'Madu Maag Al Mabruroh', 'MBR', 55000,100),
+('MBR022', 'Madu Manggisa (Madu plus Ekstrak Manggis) Al Mabru', 'MBR', 8000,1000),
+('MBR023', 'Madu Penyubur Kandungan Al Mabruroh', 'MBR', 75000,100),
+('MBR024', 'Madu SALAMI (Asam urat + Reumatik) Al Mabruroh', 'MBR', 7000,1000),
+('MBR025', 'COCOMAXI Santan Bubuk', 'MBR', 6000,100),
+('MEN592', 'Madu Propolis Sapu Jagad Plus Royal Jelly & Habbat', 'MEN', 4000,1000),
+('MEN593', 'Mama Honey Bumil', 'MEN', 25000,100),
+('MEN594', 'Mama Honey Busui', 'MEN', 25000,100),
+('MEN595', 'Mama Honey Subur', 'MEN', 25000,100),
+('MEN596', 'Manja Honey', 'MEN', 3000,1000),
+('MEN597', 'Mumtaz Kids Honey', 'MEN', 25000,100),
+('MEN598', 'Ramuan Madu Pedang Arab (Khusus Pria)', 'MEN', 7000,1000),
+('MEN599', 'Soyamil (Susu Herbal Ibu Hamil)', 'MEN', 28000,100),
+('MHE044', 'Afiafit', 'MHE', 6000,1000),
+('MHE045', 'Madu Randu 0.5kg Al-Manar', 'MHE', 4000,1000),
+('MTI051', 'Baby Drops ( Suplemen Tetes Bayi & Anak ) Tasnim 1', 'MTI', 15000,100),
+('MTI052', 'Kapsul Etawana Goats Milk Extra Colostrum Tasnim', 'MTI', 6000,1000),
+('MTI053', 'Kapsul Gamasna Tasnim (Gamat Emas)', 'MTI', 7000,1000),
+('MTI054', 'Kapsul Genius Tasnim (Generasi Hebat & Cerdas)', 'MTI', 35000,100),
+('MTI055', 'Kapsul Gurahna Tasnim (Gurah Modern Tanpa Rasa Sak', 'MTI', 45000,100),
+('MTI056', 'Kapsul Hongna Tasnim (Ekstrak Binahong Plus) 60 ka', 'MTI', 5000,1000),
+('MTI057', 'Kapsul Nisana Tasnim 60 Kapsul', 'MTI', 45000,100),
+('MTI058', 'Kapsul Vitana Tasnim (Sinergi 9 Herbal Berkhasiat ', 'MTI', 6000,1000),
+('MTI059', 'Kapsul Xanthona Tasnim (Ekstrak Kulit Manggis Plus', 'MTI', 5000,1000),
+('MTI060', 'Madu Asina ( Nutrisi Khusus Ibu Menyusui ) Tasnim ', 'MTI', 3000,1000),
+('MTI061', 'Madu Herbal Diabetana Tasnim (Madu Khusus Diabetes', 'MTI', 8000,1000),
+('MTI062', 'Madu Herbal TASNIM 17 in 1', 'MTI', 9000,1000),
+('MTI063', 'Madu Herbal Tasnim Ankana (Madu Herbal Khusus Kank', 'MTI', 1000,10000),
+('MTI064', 'Madu Herbal Tasnim Brain (Madu Kecerdasan)', 'MTI', 7000,1000),
+('MTI065', 'Madu Herbal Tasnim Gamatana (Madu Khusus Regeneras', 'MTI', 8000,1000),
+('MTI066', 'Madu Herbal Tasnim Honey Moon', 'MTI', 8000,1000),
+('MTI067', 'Madu Herbal Zamthona Tasnim', 'MTI', 75000,100),
+('MTI068', 'Madu Kidsna ( Madu Khusus Buah Hati Tercinta ) Tas', 'MTI', 3000,1000),
+('MTI069', 'Minyak Oles Pain Tasnim 30ml (Minyak Oles untuk Ra', 'MTI', 25000,100),
+('MTI070', 'Minyak Oleska Tasnim 15 ml (Minyak Oles Serbaguna)', 'MTI', 15000,100),
+('MUS046', 'Siwak Basah Import Al-Muslim', 'MUS', 12000,100),
+('NAH071', 'Kid''s Honey Complete Protect', 'NAH', 5000,1000),
+('NAH072', 'Madu Hutan plus Spirulina', 'NAH', 4000,1000),
+('NAH073', 'Madu Omega 3', 'NAH', 5000,1000),
+('NAH074', 'Madu Xtamina Radix plus Ginseng Korea dan Tongkat ', 'NAH', 55000,100),
+('NAH075', 'Nigella Propolis 100 Kapsul', 'NAH', 8000,1000),
+('NAH076', 'Spirulina Kid''s Honey Plus Gamat dan Klorofil', 'NAH', 25000,100),
+('NAH077', 'Spirulina kid''s Honey plus Propolis', 'NAH', 25000,100),
+('NAH078', 'Spirulina Madu Stamina (+ Pegagan + Meniran + Pasa', 'NAH', 45000,100),
+('NAH079', 'Walad Honey (+ Kurma + Pegagan + Temulawak dll)', 'NAH', 22000,100),
+('NAH080', 'Walad Honey GOLD', 'NAH', 25000,100),
+('NAH081', 'Walad Honey Premium', 'NAH', 25000,100),
+('NAW028', 'Gamat Gold 60 Kapsul An-Nawa Herba', 'NAW', 7000,1000),
+('NAW029', 'Minyak Daun Sirsak Cytotoxic 100 Kapsul', 'NAW', 55000,100),
+('NAW030', 'Minyak Daun Sirsak Cytotoxic 200 Kapsul', 'NAW', 1000,10000),
+('NAW031', 'Minyak Daun Sirsak Cytotoxic 60 Kapsul', 'NAW', 4000,1000),
+('NAW032', 'Super Garlic Allium Sativum 60 Kapsul', 'NAW', 4000,1000),
+('OIF066', 'Madu Hutan Multiflora 0,5 kg Ath Thoifah', 'OIF', 45000,100),
+('OIF067', 'Madu Hutan Multiflora 1 kg Ath Thoifah', 'OIF', 82000,100),
+('OIF068', 'Madu Hutan Platinum 0,5 kg Ath Thoifah', 'OIF', 49000,100),
+('OIF069', 'Madu Hutan Platinum 1 kg Ath Thoifah', 'OIF', 88000,100),
+('OND026', 'Herba Darah Tinggi Jasarama', 'OND', 6000,1000),
+('OND030', 'Lidah Buaya Instant 250 gram', 'OND', 36000,100),
+('OND034', 'Teh Celup Jati Belanda Jasarama', 'OND', 4000,1000),
+('OND038', 'Teh Celup Murbei Jasarama', 'OND', 3000,1000),
+('OND042', 'Teh Celup Temulawak Jasarama', 'OND', 3000,1000),
+('OQW026', '100 Dosa Yang Diremehkan Wanita', 'QOW', 37000,100),
+('OQW027', 'Bekam Sunnah Nabi dan Mukjizat Medis', 'QOW', 27000,100),
+('OQW028', 'Berbahagialah Sholat Anda Tak Sia-sia', 'QOW', 14900),
+('OQW029', 'Bersedekahlah Maka Engkau Akan Kaya', 'QOW', 23900),
+('OQW030', 'Fiqih Pengobatan Islami', 'QOW', 35000,100),
+('OQW031', 'Haji Nabi (Sejak Berangkat dari Madinah Hingga Kem', 'QOW', 18900),
+('OQW032', 'Ibadah Kurban', 'QOW', 10900,100),
+('OQW033', 'Keajaiban Thibbun Nabawi', 'QOW', 43000,100),
+('OQW034', 'Khasiat Kurma ''Ajwah (Makanan Sehat dan Obat Nabaw', 'QOW', 17000,100) ]
+
+]
+[ TIME: Sun Jan 11 10:47:56 ICT 2015 ]
+% com.mckoi.database.DatabaseException: The insert data list varies in size.
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:118)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[  INSERT INTO products VALUES
+('HIU516', 'Nafsu Makan Herbal Indo Utama', 'HIU', 4000,1000),
+('HIU517', 'Neo_Tensi (Mencegah dan Mengobati Darah Tinggi)', 'HIU', 45000,100),
+('HIU518', 'Neuro Herba (Stroke)', 'HIU', 55000,100),
+('HIU519', 'Papua Sarang Semut Herbal Indo Utama', 'HIU', 75000,100),
+('HIU520', 'Pro Koles (Menurunkan Kolesterol Tinggi dan Menceg', 'HIU', 45000,100),
+('HIU521', 'PROSAMURA', 'HIU', 45000,100),
+('HIU522', 'Prostat Herbal Indo Utama', 'HIU', 45000,100),
+('HIU523', 'SAMURATIK', 'HIU', 55000,100),
+('HIU524', 'Sari Kurma Gold Thibbuna', 'HIU', 3000,1000),
+('HIU525', 'Superfood Spirulins', 'HIU', 6000,1000),
+('HIU526', 'Zaitun Oil Thibbuna isi 100 Kapsul', 'HIU', 25000,100),
+('HIU527', 'Zaitun Oil Thibbuna isi 210 Kapsul', 'HIU', 44000,100),
+('HPN137', 'Air Hajar Sa''adah 3 ml El Hanif', 'HPN', 65000,100),
+('HPN138', 'Minyak Alami Tongkat Satria (Untuk Suami)', 'HPN', 8000,1000),
+('HPN139', 'Minyak Bulus El-Hanif', 'HPN', 25000,100),
+('HPN140', 'Obat Luka Jempolan (Obat Luka Diabetes)', 'HPN', 35000,100),
+('HPN141', 'Tongkat Gurah ''V'' El-Hanif', 'HPN', 75000,100),
+('IKM564', 'HabbaGarlic 99 isi 200 kapsul Cap Unta Merah', 'IKM', 85000,100),
+('IKM565', 'HabbaGarlic 99 isi 90 kapsul Cap Unta Merah', 'IKM', 45000,100),
+('IKM566', 'Habbat plus Sirsak isi 200 kapsul Cap Onta Merah', 'IKM', 9000,1000),
+('IKM567', 'Kapsul Gamat Emas (Nutrifit) Kharisma isi 60 Kapsu', 'IKM', 92000,100),
+('IKM568', 'Kapsul Sirih Merah Oil Kharisma', 'IKM', 6000,1000),
+('IKM569', 'Kapsul Spirulina Kharisma isi 60 Kapsul', 'IKM', 7000,1000),
+('IKM570', 'Madu Anak Plus Plus', 'IKM', 24000,100),
+('IKM571', 'Madu Bunga Habbatussauda (Mesir) 370 gram', 'IKM', 75000,100),
+('IKM572', 'Madu Penurun Panas Kharisma', 'IKM', 22000,100),
+('IKM573', 'Madu Plus Sambung Nyawa', 'IKM', 45000,100),
+('IKM574', 'Madu Special Diabetes Kharisma', 'IKM', 45000,100),
+('IKM575', 'Tablet Spirulina Kharisma Isi 250', 'IKM', 8000,1000),
+('IMA142', 'Coffe Habasy Ginseng ( 18 in 1)', 'IMA', 25000,100),
+('IMA143', 'Kopi Plus Lingzhi (Rendah Kafein, Atasi Kanker)', 'IMA', 5000,1000),
+('IMA144', 'Madu Batuk El Iman 175 gram', 'IMA', 3000,1000),
+('IMA145', 'Madu Thypus El Iman', 'IMA', 55000,100),
+('INI016', 'Fito Herba 50 kapsul Zakyaa (Menurunkan Kolesterol', 'INI', 0),
+('INI017', 'Power Zip 50 Kaplet Zakyaa (Meningkatkan Daya Taha', 'INI', 0),
+('INI018', 'Priaku Prima Joss Plus Kopi Luwak', 'INI', 75000,100),
+('INI019', 'Shampo Olive Oil + Aloe Vera 100 ml Zakyaa', 'INI', 26000,100),
+('INI020', 'Yuva 50 kapsul Zakya (Menjaga Keremajaan Kulit)', 'INI', 0),
+('JAS025', 'ANTITOXIN Plus (Herba Detoxifikasi)', 'JAS', 75000,100),
+('JAS029', 'Herba Stroke Jasarama', 'JAS', 6000,1000),
+('JAS033', 'Teh Celup Hijau Asli Cap Daun Mas Jasarama', 'JAS', 2000,1000),
+('JAS037', 'Teh Celup Mengkudu Jasarama', 'JAS', 3000,1000),
+('JAS041', 'Teh Celup Sirih Jasarama', 'JAS', 3000,1000),
+('JFI044', 'Madu Anak Jasmine X-Tra Propolis 7 In 1 isi 150 gr', 'JFI', 25000,100),
+('JFI045', 'Madu Asmafas (Asma & Sesak Nafas) 150 gr', 'JFI', 25000,100),
+('JFI046', 'Madu Balita Jasmine X-Tra Propolis', 'JFI', 12500,100),
+('JFI047', 'Madu Hitam Pahit 3 In 1 DIABET isi 350 gr', 'JFI', 6000,1000),
+('JFI048', 'Madu Ostofos (Osteoporosis) isi 350 gr', 'JFI', 6000,1000),
+('JFI049', 'Madu Probiotik (Flek & Batuk) 150gr', 'JFI', 25000,100),
+('JFI050', 'Madu Putih Jasmine (Royal Jelly & Bee Pollen) 350 ', 'JFI', 5000,1000),
+('JFM027', 'Herba Meniran Plus Jasarama', 'JFM', 6000,1000),
+('JFM031', 'Teh Celup Daun Sirsak Jasarama', 'JFM', 32000,100),
+('JFM035', 'Teh Celup Kulit Manggis Jasarama', 'JFM', 35000,100),
+('JFM039', 'Teh Celup Pegagan Plus Jasarama', 'JFM', 3000,1000),
+('JFM043', 'Teh Hijau Asli Cap Daun Mas 75 gram Jasarama', 'JFM', 15000,100),
+('KHO042', 'Madu Hitam Sumbawa Al Khodry', 'KHO', 75000,100),
+('KHO043', 'Minyak Kemiri Premium Al Khodry', 'KHO', 25000,100),
+('KIA025', 'Air Hajar Sa''adah/Jahannam Mesir 3 ml Al Kautsar', 'KIA', 65000,100),
+('KIA026', 'BILQIS CREAM (Pemutih Ketiak dan Selangkangan)', 'KIA', 55000,100),
+('KIA027', 'Breast Up Cream (Pengencang Payudara)', 'KIA', 85000,100),
+('KIA028', 'Ekstrak Tribulus Gold Terrestris', 'KIA', 5000,1000),
+('KIA029', 'Hajar Sa''adah Black Stone With Aroma Teraphy', 'KIA', 9000,1000),
+('KIA030', 'Herbal Axilla (Penghilang Bau Badan)', 'KIA', 35000,100),
+('KIA031', 'Humairo Cream Nature', 'KIA', 35000,100),
+('KIA032', 'Kopi Sulthon 7 in 1 (Kopinya Keluarga Harmonis)', 'KIA', 1000,10000),
+('KIA033', 'Ladies Whitening Cream (Pemutih Wajah dan Leher)', 'KIA', 45000,100),
+('KIA034', 'Long Big Enlargement X Nature Oil 6 ml', 'KIA', 2000,10000),
+('KIA035', 'Minyak Bulus Al Kautsar', 'KIA', 25000,100),
+('KIA036', 'Minyak Bulus Plus Al Kautsar', 'KIA', 3000,1000),
+('KIA037', 'Minyak Gosok Sumbawa Asli', 'KIA', 5000,1000),
+('KIA038', 'Permanent Penis Enlargement (Natural Oil)', 'KIA', 12000,1000),
+('KIA039', 'Pil Manjakani (Female Solution)', 'KIA', 95000,100),
+('KIA040', 'Squalene Cream (Cerahkan Kulit Wajah)', 'KIA', 35000,100),
+('KIA041', 'Tongkat Gurah Vagina Super (TGV Super)', 'KIA', 75000,100),
+('KZU576', 'Alat Bekam Biru Kang Zhu 12 Cups', 'KZU', 17000,1000),
+('KZU577', 'Alat Bekam Biru Kang Zhu 24 Cups', 'KZU', 29000,1000),
+('KZU578', 'Alat Bekam Biru Kang Zhu 6 Cups', 'KZU', 9000,1000),
+('KZU579', 'Alat Bekam Kuning Kang Zhu 14 Cups', 'KZU', 32000,1000),
+('KZU580', 'Alat Bekam Kuning Kang Zhu 8 Cups', 'KZU', 2000,10000),
+('MAB064', 'OSaGi (Obat Sakit Gigi)', 'MAB', 35000,100),
+('MAB065', 'OSARI (Obat Sariawan dan Panas Dalam)', 'MAB', 35000,100),
+('MBR017', 'Eury - X (Madu Ginseng Pasak Bumi) Al Mabruroh', 'MBR', 65000,100),
+('MBR018', 'Madu For Mama (Untuk Ibu Menyusui) Al Mabruroh', 'MBR', 6000,1000),
+('MBR019', 'Madu Ibu Hamil Al Mabruroh', 'MBR', 55000,100),
+('MBR020', 'Madu Lebah Emas Bioflavonoid Al Mabruroh', 'MBR', 6000,1000),
+('MBR021', 'Madu Maag Al Mabruroh', 'MBR', 55000,100),
+('MBR022', 'Madu Manggisa (Madu plus Ekstrak Manggis) Al Mabru', 'MBR', 8000,1000),
+('MBR023', 'Madu Penyubur Kandungan Al Mabruroh', 'MBR', 75000,100),
+('MBR024', 'Madu SALAMI (Asam urat + Reumatik) Al Mabruroh', 'MBR', 7000,1000),
+('MBR025', 'COCOMAXI Santan Bubuk', 'MBR', 6000,100),
+('MEN592', 'Madu Propolis Sapu Jagad Plus Royal Jelly & Habbat', 'MEN', 4000,1000),
+('MEN593', 'Mama Honey Bumil', 'MEN', 25000,100),
+('MEN594', 'Mama Honey Busui', 'MEN', 25000,100),
+('MEN595', 'Mama Honey Subur', 'MEN', 25000,100),
+('MEN596', 'Manja Honey', 'MEN', 3000,1000),
+('MEN597', 'Mumtaz Kids Honey', 'MEN', 25000,100),
+('MEN598', 'Ramuan Madu Pedang Arab (Khusus Pria)', 'MEN', 7000,1000),
+('MEN599', 'Soyamil (Susu Herbal Ibu Hamil)', 'MEN', 28000,100),
+('MHE044', 'Afiafit', 'MHE', 6000,1000),
+('MHE045', 'Madu Randu 0.5kg Al-Manar', 'MHE', 4000,1000),
+('MTI051', 'Baby Drops ( Suplemen Tetes Bayi & Anak ) Tasnim 1', 'MTI', 15000,100),
+('MTI052', 'Kapsul Etawana Goats Milk Extra Colostrum Tasnim', 'MTI', 6000,1000),
+('MTI053', 'Kapsul Gamasna Tasnim (Gamat Emas)', 'MTI', 7000,1000),
+('MTI054', 'Kapsul Genius Tasnim (Generasi Hebat & Cerdas)', 'MTI', 35000,100),
+('MTI055', 'Kapsul Gurahna Tasnim (Gurah Modern Tanpa Rasa Sak', 'MTI', 45000,100),
+('MTI056', 'Kapsul Hongna Tasnim (Ekstrak Binahong Plus) 60 ka', 'MTI', 5000,1000),
+('MTI057', 'Kapsul Nisana Tasnim 60 Kapsul', 'MTI', 45000,100),
+('MTI058', 'Kapsul Vitana Tasnim (Sinergi 9 Herbal Berkhasiat ', 'MTI', 6000,1000),
+('MTI059', 'Kapsul Xanthona Tasnim (Ekstrak Kulit Manggis Plus', 'MTI', 5000,1000),
+('MTI060', 'Madu Asina ( Nutrisi Khusus Ibu Menyusui ) Tasnim ', 'MTI', 3000,1000),
+('MTI061', 'Madu Herbal Diabetana Tasnim (Madu Khusus Diabetes', 'MTI', 8000,1000),
+('MTI062', 'Madu Herbal TASNIM 17 in 1', 'MTI', 9000,1000),
+('MTI063', 'Madu Herbal Tasnim Ankana (Madu Herbal Khusus Kank', 'MTI', 1000,10000),
+('MTI064', 'Madu Herbal Tasnim Brain (Madu Kecerdasan)', 'MTI', 7000,1000),
+('MTI065', 'Madu Herbal Tasnim Gamatana (Madu Khusus Regeneras', 'MTI', 8000,1000),
+('MTI066', 'Madu Herbal Tasnim Honey Moon', 'MTI', 8000,1000),
+('MTI067', 'Madu Herbal Zamthona Tasnim', 'MTI', 75000,100),
+('MTI068', 'Madu Kidsna ( Madu Khusus Buah Hati Tercinta ) Tas', 'MTI', 3000,1000),
+('MTI069', 'Minyak Oles Pain Tasnim 30ml (Minyak Oles untuk Ra', 'MTI', 25000,100),
+('MTI070', 'Minyak Oleska Tasnim 15 ml (Minyak Oles Serbaguna)', 'MTI', 15000,100),
+('MUS046', 'Siwak Basah Import Al-Muslim', 'MUS', 12000,100),
+('NAH071', 'Kid''s Honey Complete Protect', 'NAH', 5000,1000),
+('NAH072', 'Madu Hutan plus Spirulina', 'NAH', 4000,1000),
+('NAH073', 'Madu Omega 3', 'NAH', 5000,1000),
+('NAH074', 'Madu Xtamina Radix plus Ginseng Korea dan Tongkat ', 'NAH', 55000,100),
+('NAH075', 'Nigella Propolis 100 Kapsul', 'NAH', 8000,1000),
+('NAH076', 'Spirulina Kid''s Honey Plus Gamat dan Klorofil', 'NAH', 25000,100),
+('NAH077', 'Spirulina kid''s Honey plus Propolis', 'NAH', 25000,100),
+('NAH078', 'Spirulina Madu Stamina (+ Pegagan + Meniran + Pasa', 'NAH', 45000,100),
+('NAH079', 'Walad Honey (+ Kurma + Pegagan + Temulawak dll)', 'NAH', 22000,100),
+('NAH080', 'Walad Honey GOLD', 'NAH', 25000,100),
+('NAH081', 'Walad Honey Premium', 'NAH', 25000,100),
+('NAW028', 'Gamat Gold 60 Kapsul An-Nawa Herba', 'NAW', 7000,1000),
+('NAW029', 'Minyak Daun Sirsak Cytotoxic 100 Kapsul', 'NAW', 55000,100),
+('NAW030', 'Minyak Daun Sirsak Cytotoxic 200 Kapsul', 'NAW', 1000,10000),
+('NAW031', 'Minyak Daun Sirsak Cytotoxic 60 Kapsul', 'NAW', 4000,1000),
+('NAW032', 'Super Garlic Allium Sativum 60 Kapsul', 'NAW', 4000,1000),
+('OIF066', 'Madu Hutan Multiflora 0,5 kg Ath Thoifah', 'OIF', 45000,100),
+('OIF067', 'Madu Hutan Multiflora 1 kg Ath Thoifah', 'OIF', 82000,100),
+('OIF068', 'Madu Hutan Platinum 0,5 kg Ath Thoifah', 'OIF', 49000,100),
+('OIF069', 'Madu Hutan Platinum 1 kg Ath Thoifah', 'OIF', 88000,100),
+('OND026', 'Herba Darah Tinggi Jasarama', 'OND', 6000,1000),
+('OND030', 'Lidah Buaya Instant 250 gram', 'OND', 36000,100),
+('OND034', 'Teh Celup Jati Belanda Jasarama', 'OND', 4000,1000),
+('OND038', 'Teh Celup Murbei Jasarama', 'OND', 3000,1000),
+('OND042', 'Teh Celup Temulawak Jasarama', 'OND', 3000,1000),
+('OQW026', '100 Dosa Yang Diremehkan Wanita', 'QOW', 37000,100),
+('OQW027', 'Bekam Sunnah Nabi dan Mukjizat Medis', 'QOW', 27000,100),
+('OQW028', 'Berbahagialah Sholat Anda Tak Sia-sia', 'QOW', 14900,100),
+('OQW029', 'Bersedekahlah Maka Engkau Akan Kaya', 'QOW', 23900,100),
+('OQW030', 'Fiqih Pengobatan Islami', 'QOW', 35000,100),
+('OQW031', 'Haji Nabi (Sejak Berangkat dari Madinah Hingga Kem', 'QOW', 18900,100),
+('OQW032', 'Ibadah Kurban', 'QOW', 10900,100),
+('OQW033', 'Keajaiban Thibbun Nabawi', 'QOW', 43000,100),
+('OQW034', 'Khasiat Kurma ''Ajwah (Makanan Sehat dan Obat Nabaw', 'QOW', 17000,100),
+('OQW035', 'Misteri Tamu Terakhir', 'QOW', 17400),
+('OQW036', 'Muhasabah (Kiat-kiat Introspeksi Diri Seorang Musl', 'QOW', 12400),
+('OQW037', 'Mukjizat Kesembuhan dalam Jintan Hitam, Madu, Bawa', 'QOW', 14000,100),
+('QUB001', 'Madu Pollen 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB002', 'Madu Putih 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB003', 'Madu Putih 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB004', 'Madu Rambutan 0,5 kg l Qubro', 'QUB', 45000,100),
+('QUB005', 'Madu Rambutan 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB006', 'Madu Rami 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB007', 'Madu Rami 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB008', 'Madu Randu 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB009', 'Madu Randu 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB010', 'Madu Rosella 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB011', 'Madu Rosella 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB012', 'Madu Royal Honey 350 gram Al-Qubro', 'QUB', 6000,1000),
+('QUB013', 'Madu Sarang 0,5 kg Al-Qubro', 'QUB', 85000,100),
+('QUB014', 'Madu Sarang 1 kg Al-Qubro', 'QUB', 12000,1000),
+('QUB015', 'Madu Sengon 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB016', 'Madu Sengon 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB017', 'Madu Songkeling 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB018', 'Madu Songkeling 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB019', 'Madu Stroberi 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB020', 'Madu Stroberi 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB021', 'Madu Sumbawa 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB022', 'Madu Sumbawa 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB023', 'Madu Tawon Gong 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB024', 'Madu Tawon Gong 1 kg al qubro', 'QUB', 65000,100),
+('QUB038', 'Brazil Honey 500 gr Al-Qubro', 'QUB', 15000,1000),
+('QUB039', 'Madu Akasia 0.5 Kg A-Qubro', 'QUB', 45000,100),
+('QUB040', 'Madu Akasia 1 Kg A-Qubro', 'QUB', 65000,100),
+('QUB041', 'Madu Ambon 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB042', 'Madu Ambon 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB043', 'Madu Apel 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB044', 'Madu Apel 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB045', 'Madu Badui 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB046', 'Madu Badui 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB047', 'Madu Belimbing 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB048', 'Madu Belimbing 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB049', 'Madu Durian 0,5 kg al qubro', 'QUB', 45000,100),
+('QUB050', 'Madu Durian 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB051', 'Madu Flores 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB052', 'Madu Flores 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB053', 'Madu Gunung Mutis 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB054', 'Madu Gunung Mutis 1 kg Al qubro', 'QUB', 65000,100),
+('QUB055', 'Madu Gurah Anak (MGA) Al-Qubro', 'QUB', 35000,100),
+('QUB056', 'Madu Gurah Dewasa Al-Qubro', 'QUB', 45000,100),
+('QUB057', 'Madu Hitam 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB058', 'Madu Hitam 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB059', 'Madu Hutan Riau 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB060', 'Madu Hutan Riau 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB061', 'Madu Jambi 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB062', 'Madu Jambi 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB063', 'Madu Jeruk 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB064', 'Madu Jeruk 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB065', 'Madu Kaliandra 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB066', 'Madu Kaliandra Al-Qubro 1kg', 'QUB', 65000,100);
+ ]
+
+]
+[ TIME: Sun Jan 11 10:48:26 ICT 2015 ]
+% com.mckoi.database.DatabaseException: The insert data list varies in size.
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:118)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO products VALUES
+('HIU516', 'Nafsu Makan Herbal Indo Utama', 'HIU', 4000,1000),
+('HIU517', 'Neo_Tensi (Mencegah dan Mengobati Darah Tinggi)', 'HIU', 45000,100),
+('HIU518', 'Neuro Herba (Stroke)', 'HIU', 55000,100),
+('HIU519', 'Papua Sarang Semut Herbal Indo Utama', 'HIU', 75000,100),
+('HIU520', 'Pro Koles (Menurunkan Kolesterol Tinggi dan Menceg', 'HIU', 45000,100),
+('HIU521', 'PROSAMURA', 'HIU', 45000,100),
+('HIU522', 'Prostat Herbal Indo Utama', 'HIU', 45000,100),
+('HIU523', 'SAMURATIK', 'HIU', 55000,100),
+('HIU524', 'Sari Kurma Gold Thibbuna', 'HIU', 3000,1000),
+('HIU525', 'Superfood Spirulins', 'HIU', 6000,1000),
+('HIU526', 'Zaitun Oil Thibbuna isi 100 Kapsul', 'HIU', 25000,100),
+('HIU527', 'Zaitun Oil Thibbuna isi 210 Kapsul', 'HIU', 44000,100),
+('HPN137', 'Air Hajar Sa''adah 3 ml El Hanif', 'HPN', 65000,100),
+('HPN138', 'Minyak Alami Tongkat Satria (Untuk Suami)', 'HPN', 8000,1000),
+('HPN139', 'Minyak Bulus El-Hanif', 'HPN', 25000,100),
+('HPN140', 'Obat Luka Jempolan (Obat Luka Diabetes)', 'HPN', 35000,100),
+('HPN141', 'Tongkat Gurah ''V'' El-Hanif', 'HPN', 75000,100),
+('IKM564', 'HabbaGarlic 99 isi 200 kapsul Cap Unta Merah', 'IKM', 85000,100),
+('IKM565', 'HabbaGarlic 99 isi 90 kapsul Cap Unta Merah', 'IKM', 45000,100),
+('IKM566', 'Habbat plus Sirsak isi 200 kapsul Cap Onta Merah', 'IKM', 9000,1000),
+('IKM567', 'Kapsul Gamat Emas (Nutrifit) Kharisma isi 60 Kapsu', 'IKM', 92000,100),
+('IKM568', 'Kapsul Sirih Merah Oil Kharisma', 'IKM', 6000,1000),
+('IKM569', 'Kapsul Spirulina Kharisma isi 60 Kapsul', 'IKM', 7000,1000),
+('IKM570', 'Madu Anak Plus Plus', 'IKM', 24000,100),
+('IKM571', 'Madu Bunga Habbatussauda (Mesir) 370 gram', 'IKM', 75000,100),
+('IKM572', 'Madu Penurun Panas Kharisma', 'IKM', 22000,100),
+('IKM573', 'Madu Plus Sambung Nyawa', 'IKM', 45000,100),
+('IKM574', 'Madu Special Diabetes Kharisma', 'IKM', 45000,100),
+('IKM575', 'Tablet Spirulina Kharisma Isi 250', 'IKM', 8000,1000),
+('IMA142', 'Coffe Habasy Ginseng ( 18 in 1)', 'IMA', 25000,100),
+('IMA143', 'Kopi Plus Lingzhi (Rendah Kafein, Atasi Kanker)', 'IMA', 5000,1000),
+('IMA144', 'Madu Batuk El Iman 175 gram', 'IMA', 3000,1000),
+('IMA145', 'Madu Thypus El Iman', 'IMA', 55000,100),
+('INI016', 'Fito Herba 50 kapsul Zakyaa (Menurunkan Kolesterol', 'INI', 0),
+('INI017', 'Power Zip 50 Kaplet Zakyaa (Meningkatkan Daya Taha', 'INI', 0),
+('INI018', 'Priaku Prima Joss Plus Kopi Luwak', 'INI', 75000,100),
+('INI019', 'Shampo Olive Oil + Aloe Vera 100 ml Zakyaa', 'INI', 26000,100),
+('INI020', 'Yuva 50 kapsul Zakya (Menjaga Keremajaan Kulit)', 'INI', 0),
+('JAS025', 'ANTITOXIN Plus (Herba Detoxifikasi)', 'JAS', 75000,100),
+('JAS029', 'Herba Stroke Jasarama', 'JAS', 6000,1000),
+('JAS033', 'Teh Celup Hijau Asli Cap Daun Mas Jasarama', 'JAS', 2000,1000),
+('JAS037', 'Teh Celup Mengkudu Jasarama', 'JAS', 3000,1000),
+('JAS041', 'Teh Celup Sirih Jasarama', 'JAS', 3000,1000),
+('JFI044', 'Madu Anak Jasmine X-Tra Propolis 7 In 1 isi 150 gr', 'JFI', 25000,100),
+('JFI045', 'Madu Asmafas (Asma & Sesak Nafas) 150 gr', 'JFI', 25000,100),
+('JFI046', 'Madu Balita Jasmine X-Tra Propolis', 'JFI', 12500,100),
+('JFI047', 'Madu Hitam Pahit 3 In 1 DIABET isi 350 gr', 'JFI', 6000,1000),
+('JFI048', 'Madu Ostofos (Osteoporosis) isi 350 gr', 'JFI', 6000,1000),
+('JFI049', 'Madu Probiotik (Flek & Batuk) 150gr', 'JFI', 25000,100),
+('JFI050', 'Madu Putih Jasmine (Royal Jelly & Bee Pollen) 350 ', 'JFI', 5000,1000),
+('JFM027', 'Herba Meniran Plus Jasarama', 'JFM', 6000,1000),
+('JFM031', 'Teh Celup Daun Sirsak Jasarama', 'JFM', 32000,100),
+('JFM035', 'Teh Celup Kulit Manggis Jasarama', 'JFM', 35000,100),
+('JFM039', 'Teh Celup Pegagan Plus Jasarama', 'JFM', 3000,1000),
+('JFM043', 'Teh Hijau Asli Cap Daun Mas 75 gram Jasarama', 'JFM', 15000,100),
+('KHO042', 'Madu Hitam Sumbawa Al Khodry', 'KHO', 75000,100),
+('KHO043', 'Minyak Kemiri Premium Al Khodry', 'KHO', 25000,100),
+('KIA025', 'Air Hajar Sa''adah/Jahannam Mesir 3 ml Al Kautsar', 'KIA', 65000,100),
+('KIA026', 'BILQIS CREAM (Pemutih Ketiak dan Selangkangan)', 'KIA', 55000,100),
+('KIA027', 'Breast Up Cream (Pengencang Payudara)', 'KIA', 85000,100),
+('KIA028', 'Ekstrak Tribulus Gold Terrestris', 'KIA', 5000,1000),
+('KIA029', 'Hajar Sa''adah Black Stone With Aroma Teraphy', 'KIA', 9000,1000),
+('KIA030', 'Herbal Axilla (Penghilang Bau Badan)', 'KIA', 35000,100),
+('KIA031', 'Humairo Cream Nature', 'KIA', 35000,100),
+('KIA032', 'Kopi Sulthon 7 in 1 (Kopinya Keluarga Harmonis)', 'KIA', 1000,10000),
+('KIA033', 'Ladies Whitening Cream (Pemutih Wajah dan Leher)', 'KIA', 45000,100),
+('KIA034', 'Long Big Enlargement X Nature Oil 6 ml', 'KIA', 2000,10000),
+('KIA035', 'Minyak Bulus Al Kautsar', 'KIA', 25000,100),
+('KIA036', 'Minyak Bulus Plus Al Kautsar', 'KIA', 3000,1000),
+('KIA037', 'Minyak Gosok Sumbawa Asli', 'KIA', 5000,1000),
+('KIA038', 'Permanent Penis Enlargement (Natural Oil)', 'KIA', 12000,1000),
+('KIA039', 'Pil Manjakani (Female Solution)', 'KIA', 95000,100),
+('KIA040', 'Squalene Cream (Cerahkan Kulit Wajah)', 'KIA', 35000,100),
+('KIA041', 'Tongkat Gurah Vagina Super (TGV Super)', 'KIA', 75000,100),
+('KZU576', 'Alat Bekam Biru Kang Zhu 12 Cups', 'KZU', 17000,1000),
+('KZU577', 'Alat Bekam Biru Kang Zhu 24 Cups', 'KZU', 29000,1000),
+('KZU578', 'Alat Bekam Biru Kang Zhu 6 Cups', 'KZU', 9000,1000),
+('KZU579', 'Alat Bekam Kuning Kang Zhu 14 Cups', 'KZU', 32000,1000),
+('KZU580', 'Alat Bekam Kuning Kang Zhu 8 Cups', 'KZU', 2000,10000),
+('MAB064', 'OSaGi (Obat Sakit Gigi)', 'MAB', 35000,100),
+('MAB065', 'OSARI (Obat Sariawan dan Panas Dalam)', 'MAB', 35000,100),
+('MBR017', 'Eury - X (Madu Ginseng Pasak Bumi) Al Mabruroh', 'MBR', 65000,100),
+('MBR018', 'Madu For Mama (Untuk Ibu Menyusui) Al Mabruroh', 'MBR', 6000,1000),
+('MBR019', 'Madu Ibu Hamil Al Mabruroh', 'MBR', 55000,100),
+('MBR020', 'Madu Lebah Emas Bioflavonoid Al Mabruroh', 'MBR', 6000,1000),
+('MBR021', 'Madu Maag Al Mabruroh', 'MBR', 55000,100),
+('MBR022', 'Madu Manggisa (Madu plus Ekstrak Manggis) Al Mabru', 'MBR', 8000,1000),
+('MBR023', 'Madu Penyubur Kandungan Al Mabruroh', 'MBR', 75000,100),
+('MBR024', 'Madu SALAMI (Asam urat + Reumatik) Al Mabruroh', 'MBR', 7000,1000),
+('MBR025', 'COCOMAXI Santan Bubuk', 'MBR', 6000,100),
+('MEN592', 'Madu Propolis Sapu Jagad Plus Royal Jelly & Habbat', 'MEN', 4000,1000),
+('MEN593', 'Mama Honey Bumil', 'MEN', 25000,100),
+('MEN594', 'Mama Honey Busui', 'MEN', 25000,100),
+('MEN595', 'Mama Honey Subur', 'MEN', 25000,100),
+('MEN596', 'Manja Honey', 'MEN', 3000,1000),
+('MEN597', 'Mumtaz Kids Honey', 'MEN', 25000,100),
+('MEN598', 'Ramuan Madu Pedang Arab (Khusus Pria)', 'MEN', 7000,1000),
+('MEN599', 'Soyamil (Susu Herbal Ibu Hamil)', 'MEN', 28000,100),
+('MHE044', 'Afiafit', 'MHE', 6000,1000),
+('MHE045', 'Madu Randu 0.5kg Al-Manar', 'MHE', 4000,1000),
+('MTI051', 'Baby Drops ( Suplemen Tetes Bayi & Anak ) Tasnim 1', 'MTI', 15000,100),
+('MTI052', 'Kapsul Etawana Goats Milk Extra Colostrum Tasnim', 'MTI', 6000,1000),
+('MTI053', 'Kapsul Gamasna Tasnim (Gamat Emas)', 'MTI', 7000,1000),
+('MTI054', 'Kapsul Genius Tasnim (Generasi Hebat & Cerdas)', 'MTI', 35000,100),
+('MTI055', 'Kapsul Gurahna Tasnim (Gurah Modern Tanpa Rasa Sak', 'MTI', 45000,100),
+('MTI056', 'Kapsul Hongna Tasnim (Ekstrak Binahong Plus) 60 ka', 'MTI', 5000,1000),
+('MTI057', 'Kapsul Nisana Tasnim 60 Kapsul', 'MTI', 45000,100),
+('MTI058', 'Kapsul Vitana Tasnim (Sinergi 9 Herbal Berkhasiat ', 'MTI', 6000,1000),
+('MTI059', 'Kapsul Xanthona Tasnim (Ekstrak Kulit Manggis Plus', 'MTI', 5000,1000),
+('MTI060', 'Madu Asina ( Nutrisi Khusus Ibu Menyusui ) Tasnim ', 'MTI', 3000,1000),
+('MTI061', 'Madu Herbal Diabetana Tasnim (Madu Khusus Diabetes', 'MTI', 8000,1000),
+('MTI062', 'Madu Herbal TASNIM 17 in 1', 'MTI', 9000,1000),
+('MTI063', 'Madu Herbal Tasnim Ankana (Madu Herbal Khusus Kank', 'MTI', 1000,10000),
+('MTI064', 'Madu Herbal Tasnim Brain (Madu Kecerdasan)', 'MTI', 7000,1000),
+('MTI065', 'Madu Herbal Tasnim Gamatana (Madu Khusus Regeneras', 'MTI', 8000,1000),
+('MTI066', 'Madu Herbal Tasnim Honey Moon', 'MTI', 8000,1000),
+('MTI067', 'Madu Herbal Zamthona Tasnim', 'MTI', 75000,100),
+('MTI068', 'Madu Kidsna ( Madu Khusus Buah Hati Tercinta ) Tas', 'MTI', 3000,1000),
+('MTI069', 'Minyak Oles Pain Tasnim 30ml (Minyak Oles untuk Ra', 'MTI', 25000,100),
+('MTI070', 'Minyak Oleska Tasnim 15 ml (Minyak Oles Serbaguna)', 'MTI', 15000,100),
+('MUS046', 'Siwak Basah Import Al-Muslim', 'MUS', 12000,100),
+('NAH071', 'Kid''s Honey Complete Protect', 'NAH', 5000,1000),
+('NAH072', 'Madu Hutan plus Spirulina', 'NAH', 4000,1000),
+('NAH073', 'Madu Omega 3', 'NAH', 5000,1000),
+('NAH074', 'Madu Xtamina Radix plus Ginseng Korea dan Tongkat ', 'NAH', 55000,100),
+('NAH075', 'Nigella Propolis 100 Kapsul', 'NAH', 8000,1000),
+('NAH076', 'Spirulina Kid''s Honey Plus Gamat dan Klorofil', 'NAH', 25000,100),
+('NAH077', 'Spirulina kid''s Honey plus Propolis', 'NAH', 25000,100),
+('NAH078', 'Spirulina Madu Stamina (+ Pegagan + Meniran + Pasa', 'NAH', 45000,100),
+('NAH079', 'Walad Honey (+ Kurma + Pegagan + Temulawak dll)', 'NAH', 22000,100),
+('NAH080', 'Walad Honey GOLD', 'NAH', 25000,100),
+('NAH081', 'Walad Honey Premium', 'NAH', 25000,100),
+('NAW028', 'Gamat Gold 60 Kapsul An-Nawa Herba', 'NAW', 7000,1000),
+('NAW029', 'Minyak Daun Sirsak Cytotoxic 100 Kapsul', 'NAW', 55000,100),
+('NAW030', 'Minyak Daun Sirsak Cytotoxic 200 Kapsul', 'NAW', 1000,10000),
+('NAW031', 'Minyak Daun Sirsak Cytotoxic 60 Kapsul', 'NAW', 4000,1000),
+('NAW032', 'Super Garlic Allium Sativum 60 Kapsul', 'NAW', 4000,1000),
+('OIF066', 'Madu Hutan Multiflora 0,5 kg Ath Thoifah', 'OIF', 45000,100),
+('OIF067', 'Madu Hutan Multiflora 1 kg Ath Thoifah', 'OIF', 82000,100),
+('OIF068', 'Madu Hutan Platinum 0,5 kg Ath Thoifah', 'OIF', 49000,100),
+('OIF069', 'Madu Hutan Platinum 1 kg Ath Thoifah', 'OIF', 88000,100),
+('OND026', 'Herba Darah Tinggi Jasarama', 'OND', 6000,1000),
+('OND030', 'Lidah Buaya Instant 250 gram', 'OND', 36000,100),
+('OND034', 'Teh Celup Jati Belanda Jasarama', 'OND', 4000,1000),
+('OND038', 'Teh Celup Murbei Jasarama', 'OND', 3000,1000),
+('OND042', 'Teh Celup Temulawak Jasarama', 'OND', 3000,1000),
+('OQW026', '100 Dosa Yang Diremehkan Wanita', 'QOW', 37000,100),
+('OQW027', 'Bekam Sunnah Nabi dan Mukjizat Medis', 'QOW', 27000,100),
+('OQW028', 'Berbahagialah Sholat Anda Tak Sia-sia', 'QOW', 14900,100),
+('OQW029', 'Bersedekahlah Maka Engkau Akan Kaya', 'QOW', 23900,100),
+('OQW030', 'Fiqih Pengobatan Islami', 'QOW', 35000,100),
+('OQW031', 'Haji Nabi (Sejak Berangkat dari Madinah Hingga Kem', 'QOW', 18900,100),
+('OQW032', 'Ibadah Kurban', 'QOW', 10900,100),
+('OQW033', 'Keajaiban Thibbun Nabawi', 'QOW', 43000,100),
+('OQW034', 'Khasiat Kurma ''Ajwah (Makanan Sehat dan Obat Nabaw', 'QOW', 17000,100),
+('OQW035', 'Misteri Tamu Terakhir', 'QOW', 17400) ]
+
+]
+[ TIME: Sun Jan 11 10:49:01 ICT 2015 ]
+% com.mckoi.database.DatabaseException: The insert data list varies in size.
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:118)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO products VALUES
+('HIU516', 'Nafsu Makan Herbal Indo Utama', 'HIU', 4000,1000),
+('HIU517', 'Neo_Tensi (Mencegah dan Mengobati Darah Tinggi)', 'HIU', 45000,100),
+('HIU518', 'Neuro Herba (Stroke)', 'HIU', 55000,100),
+('HIU519', 'Papua Sarang Semut Herbal Indo Utama', 'HIU', 75000,100),
+('HIU520', 'Pro Koles (Menurunkan Kolesterol Tinggi dan Menceg', 'HIU', 45000,100),
+('HIU521', 'PROSAMURA', 'HIU', 45000,100),
+('HIU522', 'Prostat Herbal Indo Utama', 'HIU', 45000,100),
+('HIU523', 'SAMURATIK', 'HIU', 55000,100),
+('HIU524', 'Sari Kurma Gold Thibbuna', 'HIU', 3000,1000),
+('HIU525', 'Superfood Spirulins', 'HIU', 6000,1000),
+('HIU526', 'Zaitun Oil Thibbuna isi 100 Kapsul', 'HIU', 25000,100),
+('HIU527', 'Zaitun Oil Thibbuna isi 210 Kapsul', 'HIU', 44000,100),
+('HPN137', 'Air Hajar Sa''adah 3 ml El Hanif', 'HPN', 65000,100),
+('HPN138', 'Minyak Alami Tongkat Satria (Untuk Suami)', 'HPN', 8000,1000),
+('HPN139', 'Minyak Bulus El-Hanif', 'HPN', 25000,100),
+('HPN140', 'Obat Luka Jempolan (Obat Luka Diabetes)', 'HPN', 35000,100),
+('HPN141', 'Tongkat Gurah ''V'' El-Hanif', 'HPN', 75000,100),
+('IKM564', 'HabbaGarlic 99 isi 200 kapsul Cap Unta Merah', 'IKM', 85000,100),
+('IKM565', 'HabbaGarlic 99 isi 90 kapsul Cap Unta Merah', 'IKM', 45000,100),
+('IKM566', 'Habbat plus Sirsak isi 200 kapsul Cap Onta Merah', 'IKM', 9000,1000),
+('IKM567', 'Kapsul Gamat Emas (Nutrifit) Kharisma isi 60 Kapsu', 'IKM', 92000,100),
+('IKM568', 'Kapsul Sirih Merah Oil Kharisma', 'IKM', 6000,1000),
+('IKM569', 'Kapsul Spirulina Kharisma isi 60 Kapsul', 'IKM', 7000,1000),
+('IKM570', 'Madu Anak Plus Plus', 'IKM', 24000,100),
+('IKM571', 'Madu Bunga Habbatussauda (Mesir) 370 gram', 'IKM', 75000,100),
+('IKM572', 'Madu Penurun Panas Kharisma', 'IKM', 22000,100),
+('IKM573', 'Madu Plus Sambung Nyawa', 'IKM', 45000,100),
+('IKM574', 'Madu Special Diabetes Kharisma', 'IKM', 45000,100),
+('IKM575', 'Tablet Spirulina Kharisma Isi 250', 'IKM', 8000,1000),
+('IMA142', 'Coffe Habasy Ginseng ( 18 in 1)', 'IMA', 25000,100),
+('IMA143', 'Kopi Plus Lingzhi (Rendah Kafein, Atasi Kanker)', 'IMA', 5000,1000),
+('IMA144', 'Madu Batuk El Iman 175 gram', 'IMA', 3000,1000),
+('IMA145', 'Madu Thypus El Iman', 'IMA', 55000,100),
+('INI016', 'Fito Herba 50 kapsul Zakyaa (Menurunkan Kolesterol', 'INI', 0),
+('INI017', 'Power Zip 50 Kaplet Zakyaa (Meningkatkan Daya Taha', 'INI', 0),
+('INI018', 'Priaku Prima Joss Plus Kopi Luwak', 'INI', 75000,100),
+('INI019', 'Shampo Olive Oil + Aloe Vera 100 ml Zakyaa', 'INI', 26000,100),
+('INI020', 'Yuva 50 kapsul Zakya (Menjaga Keremajaan Kulit)', 'INI', 0),
+('JAS025', 'ANTITOXIN Plus (Herba Detoxifikasi)', 'JAS', 75000,100),
+('JAS029', 'Herba Stroke Jasarama', 'JAS', 6000,1000),
+('JAS033', 'Teh Celup Hijau Asli Cap Daun Mas Jasarama', 'JAS', 2000,1000),
+('JAS037', 'Teh Celup Mengkudu Jasarama', 'JAS', 3000,1000),
+('JAS041', 'Teh Celup Sirih Jasarama', 'JAS', 3000,1000),
+('JFI044', 'Madu Anak Jasmine X-Tra Propolis 7 In 1 isi 150 gr', 'JFI', 25000,100),
+('JFI045', 'Madu Asmafas (Asma & Sesak Nafas) 150 gr', 'JFI', 25000,100),
+('JFI046', 'Madu Balita Jasmine X-Tra Propolis', 'JFI', 12500,100),
+('JFI047', 'Madu Hitam Pahit 3 In 1 DIABET isi 350 gr', 'JFI', 6000,1000),
+('JFI048', 'Madu Ostofos (Osteoporosis) isi 350 gr', 'JFI', 6000,1000),
+('JFI049', 'Madu Probiotik (Flek & Batuk) 150gr', 'JFI', 25000,100),
+('JFI050', 'Madu Putih Jasmine (Royal Jelly & Bee Pollen) 350 ', 'JFI', 5000,1000),
+('JFM027', 'Herba Meniran Plus Jasarama', 'JFM', 6000,1000),
+('JFM031', 'Teh Celup Daun Sirsak Jasarama', 'JFM', 32000,100),
+('JFM035', 'Teh Celup Kulit Manggis Jasarama', 'JFM', 35000,100),
+('JFM039', 'Teh Celup Pegagan Plus Jasarama', 'JFM', 3000,1000),
+('JFM043', 'Teh Hijau Asli Cap Daun Mas 75 gram Jasarama', 'JFM', 15000,100),
+('KHO042', 'Madu Hitam Sumbawa Al Khodry', 'KHO', 75000,100),
+('KHO043', 'Minyak Kemiri Premium Al Khodry', 'KHO', 25000,100),
+('KIA025', 'Air Hajar Sa''adah/Jahannam Mesir 3 ml Al Kautsar', 'KIA', 65000,100),
+('KIA026', 'BILQIS CREAM (Pemutih Ketiak dan Selangkangan)', 'KIA', 55000,100),
+('KIA027', 'Breast Up Cream (Pengencang Payudara)', 'KIA', 85000,100),
+('KIA028', 'Ekstrak Tribulus Gold Terrestris', 'KIA', 5000,1000),
+('KIA029', 'Hajar Sa''adah Black Stone With Aroma Teraphy', 'KIA', 9000,1000),
+('KIA030', 'Herbal Axilla (Penghilang Bau Badan)', 'KIA', 35000,100),
+('KIA031', 'Humairo Cream Nature', 'KIA', 35000,100),
+('KIA032', 'Kopi Sulthon 7 in 1 (Kopinya Keluarga Harmonis)', 'KIA', 1000,10000),
+('KIA033', 'Ladies Whitening Cream (Pemutih Wajah dan Leher)', 'KIA', 45000,100),
+('KIA034', 'Long Big Enlargement X Nature Oil 6 ml', 'KIA', 2000,10000),
+('KIA035', 'Minyak Bulus Al Kautsar', 'KIA', 25000,100),
+('KIA036', 'Minyak Bulus Plus Al Kautsar', 'KIA', 3000,1000),
+('KIA037', 'Minyak Gosok Sumbawa Asli', 'KIA', 5000,1000),
+('KIA038', 'Permanent Penis Enlargement (Natural Oil)', 'KIA', 12000,1000),
+('KIA039', 'Pil Manjakani (Female Solution)', 'KIA', 95000,100),
+('KIA040', 'Squalene Cream (Cerahkan Kulit Wajah)', 'KIA', 35000,100),
+('KIA041', 'Tongkat Gurah Vagina Super (TGV Super)', 'KIA', 75000,100),
+('KZU576', 'Alat Bekam Biru Kang Zhu 12 Cups', 'KZU', 17000,1000),
+('KZU577', 'Alat Bekam Biru Kang Zhu 24 Cups', 'KZU', 29000,1000),
+('KZU578', 'Alat Bekam Biru Kang Zhu 6 Cups', 'KZU', 9000,1000),
+('KZU579', 'Alat Bekam Kuning Kang Zhu 14 Cups', 'KZU', 32000,1000),
+('KZU580', 'Alat Bekam Kuning Kang Zhu 8 Cups', 'KZU', 2000,10000),
+('MAB064', 'OSaGi (Obat Sakit Gigi)', 'MAB', 35000,100),
+('MAB065', 'OSARI (Obat Sariawan dan Panas Dalam)', 'MAB', 35000,100),
+('MBR017', 'Eury - X (Madu Ginseng Pasak Bumi) Al Mabruroh', 'MBR', 65000,100),
+('MBR018', 'Madu For Mama (Untuk Ibu Menyusui) Al Mabruroh', 'MBR', 6000,1000),
+('MBR019', 'Madu Ibu Hamil Al Mabruroh', 'MBR', 55000,100),
+('MBR020', 'Madu Lebah Emas Bioflavonoid Al Mabruroh', 'MBR', 6000,1000),
+('MBR021', 'Madu Maag Al Mabruroh', 'MBR', 55000,100),
+('MBR022', 'Madu Manggisa (Madu plus Ekstrak Manggis) Al Mabru', 'MBR', 8000,1000),
+('MBR023', 'Madu Penyubur Kandungan Al Mabruroh', 'MBR', 75000,100),
+('MBR024', 'Madu SALAMI (Asam urat + Reumatik) Al Mabruroh', 'MBR', 7000,1000),
+('MBR025', 'COCOMAXI Santan Bubuk', 'MBR', 6000,100),
+('MEN592', 'Madu Propolis Sapu Jagad Plus Royal Jelly & Habbat', 'MEN', 4000,1000),
+('MEN593', 'Mama Honey Bumil', 'MEN', 25000,100),
+('MEN594', 'Mama Honey Busui', 'MEN', 25000,100),
+('MEN595', 'Mama Honey Subur', 'MEN', 25000,100),
+('MEN596', 'Manja Honey', 'MEN', 3000,1000),
+('MEN597', 'Mumtaz Kids Honey', 'MEN', 25000,100),
+('MEN598', 'Ramuan Madu Pedang Arab (Khusus Pria)', 'MEN', 7000,1000),
+('MEN599', 'Soyamil (Susu Herbal Ibu Hamil)', 'MEN', 28000,100),
+('MHE044', 'Afiafit', 'MHE', 6000,1000),
+('MHE045', 'Madu Randu 0.5kg Al-Manar', 'MHE', 4000,1000),
+('MTI051', 'Baby Drops ( Suplemen Tetes Bayi & Anak ) Tasnim 1', 'MTI', 15000,100),
+('MTI052', 'Kapsul Etawana Goats Milk Extra Colostrum Tasnim', 'MTI', 6000,1000),
+('MTI053', 'Kapsul Gamasna Tasnim (Gamat Emas)', 'MTI', 7000,1000),
+('MTI054', 'Kapsul Genius Tasnim (Generasi Hebat & Cerdas)', 'MTI', 35000,100),
+('MTI055', 'Kapsul Gurahna Tasnim (Gurah Modern Tanpa Rasa Sak', 'MTI', 45000,100),
+('MTI056', 'Kapsul Hongna Tasnim (Ekstrak Binahong Plus) 60 ka', 'MTI', 5000,1000),
+('MTI057', 'Kapsul Nisana Tasnim 60 Kapsul', 'MTI', 45000,100),
+('MTI058', 'Kapsul Vitana Tasnim (Sinergi 9 Herbal Berkhasiat ', 'MTI', 6000,1000),
+('MTI059', 'Kapsul Xanthona Tasnim (Ekstrak Kulit Manggis Plus', 'MTI', 5000,1000),
+('MTI060', 'Madu Asina ( Nutrisi Khusus Ibu Menyusui ) Tasnim ', 'MTI', 3000,1000),
+('MTI061', 'Madu Herbal Diabetana Tasnim (Madu Khusus Diabetes', 'MTI', 8000,1000),
+('MTI062', 'Madu Herbal TASNIM 17 in 1', 'MTI', 9000,1000),
+('MTI063', 'Madu Herbal Tasnim Ankana (Madu Herbal Khusus Kank', 'MTI', 1000,10000),
+('MTI064', 'Madu Herbal Tasnim Brain (Madu Kecerdasan)', 'MTI', 7000,1000),
+('MTI065', 'Madu Herbal Tasnim Gamatana (Madu Khusus Regeneras', 'MTI', 8000,1000),
+('MTI066', 'Madu Herbal Tasnim Honey Moon', 'MTI', 8000,1000),
+('MTI067', 'Madu Herbal Zamthona Tasnim', 'MTI', 75000,100),
+('MTI068', 'Madu Kidsna ( Madu Khusus Buah Hati Tercinta ) Tas', 'MTI', 3000,1000),
+('MTI069', 'Minyak Oles Pain Tasnim 30ml (Minyak Oles untuk Ra', 'MTI', 25000,100),
+('MTI070', 'Minyak Oleska Tasnim 15 ml (Minyak Oles Serbaguna)', 'MTI', 15000,100),
+('MUS046', 'Siwak Basah Import Al-Muslim', 'MUS', 12000,100),
+('NAH071', 'Kid''s Honey Complete Protect', 'NAH', 5000,1000),
+('NAH072', 'Madu Hutan plus Spirulina', 'NAH', 4000,1000),
+('NAH073', 'Madu Omega 3', 'NAH', 5000,1000),
+('NAH074', 'Madu Xtamina Radix plus Ginseng Korea dan Tongkat ', 'NAH', 55000,100),
+('NAH075', 'Nigella Propolis 100 Kapsul', 'NAH', 8000,1000),
+('NAH076', 'Spirulina Kid''s Honey Plus Gamat dan Klorofil', 'NAH', 25000,100),
+('NAH077', 'Spirulina kid''s Honey plus Propolis', 'NAH', 25000,100),
+('NAH078', 'Spirulina Madu Stamina (+ Pegagan + Meniran + Pasa', 'NAH', 45000,100),
+('NAH079', 'Walad Honey (+ Kurma + Pegagan + Temulawak dll)', 'NAH', 22000,100),
+('NAH080', 'Walad Honey GOLD', 'NAH', 25000,100),
+('NAH081', 'Walad Honey Premium', 'NAH', 25000,100),
+('NAW028', 'Gamat Gold 60 Kapsul An-Nawa Herba', 'NAW', 7000,1000),
+('NAW029', 'Minyak Daun Sirsak Cytotoxic 100 Kapsul', 'NAW', 55000,100),
+('NAW030', 'Minyak Daun Sirsak Cytotoxic 200 Kapsul', 'NAW', 1000,10000),
+('NAW031', 'Minyak Daun Sirsak Cytotoxic 60 Kapsul', 'NAW', 4000,1000),
+('NAW032', 'Super Garlic Allium Sativum 60 Kapsul', 'NAW', 4000,1000),
+('OIF066', 'Madu Hutan Multiflora 0,5 kg Ath Thoifah', 'OIF', 45000,100),
+('OIF067', 'Madu Hutan Multiflora 1 kg Ath Thoifah', 'OIF', 82000,100),
+('OIF068', 'Madu Hutan Platinum 0,5 kg Ath Thoifah', 'OIF', 49000,100),
+('OIF069', 'Madu Hutan Platinum 1 kg Ath Thoifah', 'OIF', 88000,100),
+('OND026', 'Herba Darah Tinggi Jasarama', 'OND', 6000,1000),
+('OND030', 'Lidah Buaya Instant 250 gram', 'OND', 36000,100),
+('OND034', 'Teh Celup Jati Belanda Jasarama', 'OND', 4000,1000),
+('OND038', 'Teh Celup Murbei Jasarama', 'OND', 3000,1000),
+('OND042', 'Teh Celup Temulawak Jasarama', 'OND', 3000,1000),
+('OQW026', '100 Dosa Yang Diremehkan Wanita', 'QOW', 37000,100),
+('OQW027', 'Bekam Sunnah Nabi dan Mukjizat Medis', 'QOW', 27000,100),
+('OQW028', 'Berbahagialah Sholat Anda Tak Sia-sia', 'QOW', 14900,100),
+('OQW029', 'Bersedekahlah Maka Engkau Akan Kaya', 'QOW', 23900,100),
+('OQW030', 'Fiqih Pengobatan Islami', 'QOW', 35000,100),
+('OQW031', 'Haji Nabi (Sejak Berangkat dari Madinah Hingga Kem', 'QOW', 18900,100),
+('OQW032', 'Ibadah Kurban', 'QOW', 10900,100),
+('OQW033', 'Keajaiban Thibbun Nabawi', 'QOW', 43000,100),
+('OQW034', 'Khasiat Kurma ''Ajwah (Makanan Sehat dan Obat Nabaw', 'QOW', 17000,100),
+('OQW035', 'Misteri Tamu Terakhir', 'QOW', 17400,100) ]
+
+]
+[ TIME: Sun Jan 11 10:49:10 ICT 2015 ]
+% com.mckoi.database.DatabaseException: The insert data list varies in size.
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:118)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO products VALUES
+('HIU516', 'Nafsu Makan Herbal Indo Utama', 'HIU', 4000,1000),
+('HIU517', 'Neo_Tensi (Mencegah dan Mengobati Darah Tinggi)', 'HIU', 45000,100),
+('HIU518', 'Neuro Herba (Stroke)', 'HIU', 55000,100),
+('HIU519', 'Papua Sarang Semut Herbal Indo Utama', 'HIU', 75000,100),
+('HIU520', 'Pro Koles (Menurunkan Kolesterol Tinggi dan Menceg', 'HIU', 45000,100),
+('HIU521', 'PROSAMURA', 'HIU', 45000,100),
+('HIU522', 'Prostat Herbal Indo Utama', 'HIU', 45000,100),
+('HIU523', 'SAMURATIK', 'HIU', 55000,100),
+('HIU524', 'Sari Kurma Gold Thibbuna', 'HIU', 3000,1000),
+('HIU525', 'Superfood Spirulins', 'HIU', 6000,1000),
+('HIU526', 'Zaitun Oil Thibbuna isi 100 Kapsul', 'HIU', 25000,100),
+('HIU527', 'Zaitun Oil Thibbuna isi 210 Kapsul', 'HIU', 44000,100),
+('HPN137', 'Air Hajar Sa''adah 3 ml El Hanif', 'HPN', 65000,100),
+('HPN138', 'Minyak Alami Tongkat Satria (Untuk Suami)', 'HPN', 8000,1000),
+('HPN139', 'Minyak Bulus El-Hanif', 'HPN', 25000,100),
+('HPN140', 'Obat Luka Jempolan (Obat Luka Diabetes)', 'HPN', 35000,100),
+('HPN141', 'Tongkat Gurah ''V'' El-Hanif', 'HPN', 75000,100),
+('IKM564', 'HabbaGarlic 99 isi 200 kapsul Cap Unta Merah', 'IKM', 85000,100),
+('IKM565', 'HabbaGarlic 99 isi 90 kapsul Cap Unta Merah', 'IKM', 45000,100),
+('IKM566', 'Habbat plus Sirsak isi 200 kapsul Cap Onta Merah', 'IKM', 9000,1000),
+('IKM567', 'Kapsul Gamat Emas (Nutrifit) Kharisma isi 60 Kapsu', 'IKM', 92000,100),
+('IKM568', 'Kapsul Sirih Merah Oil Kharisma', 'IKM', 6000,1000),
+('IKM569', 'Kapsul Spirulina Kharisma isi 60 Kapsul', 'IKM', 7000,1000),
+('IKM570', 'Madu Anak Plus Plus', 'IKM', 24000,100),
+('IKM571', 'Madu Bunga Habbatussauda (Mesir) 370 gram', 'IKM', 75000,100),
+('IKM572', 'Madu Penurun Panas Kharisma', 'IKM', 22000,100),
+('IKM573', 'Madu Plus Sambung Nyawa', 'IKM', 45000,100),
+('IKM574', 'Madu Special Diabetes Kharisma', 'IKM', 45000,100),
+('IKM575', 'Tablet Spirulina Kharisma Isi 250', 'IKM', 8000,1000),
+('IMA142', 'Coffe Habasy Ginseng ( 18 in 1)', 'IMA', 25000,100),
+('IMA143', 'Kopi Plus Lingzhi (Rendah Kafein, Atasi Kanker)', 'IMA', 5000,1000),
+('IMA144', 'Madu Batuk El Iman 175 gram', 'IMA', 3000,1000),
+('IMA145', 'Madu Thypus El Iman', 'IMA', 55000,100),
+('INI016', 'Fito Herba 50 kapsul Zakyaa (Menurunkan Kolesterol', 'INI', 0),
+('INI017', 'Power Zip 50 Kaplet Zakyaa (Meningkatkan Daya Taha', 'INI', 0),
+('INI018', 'Priaku Prima Joss Plus Kopi Luwak', 'INI', 75000,100),
+('INI019', 'Shampo Olive Oil + Aloe Vera 100 ml Zakyaa', 'INI', 26000,100),
+('INI020', 'Yuva 50 kapsul Zakya (Menjaga Keremajaan Kulit)', 'INI', 0),
+('JAS025', 'ANTITOXIN Plus (Herba Detoxifikasi)', 'JAS', 75000,100),
+('JAS029', 'Herba Stroke Jasarama', 'JAS', 6000,1000),
+('JAS033', 'Teh Celup Hijau Asli Cap Daun Mas Jasarama', 'JAS', 2000,1000),
+('JAS037', 'Teh Celup Mengkudu Jasarama', 'JAS', 3000,1000),
+('JAS041', 'Teh Celup Sirih Jasarama', 'JAS', 3000,1000),
+('JFI044', 'Madu Anak Jasmine X-Tra Propolis 7 In 1 isi 150 gr', 'JFI', 25000,100),
+('JFI045', 'Madu Asmafas (Asma & Sesak Nafas) 150 gr', 'JFI', 25000,100),
+('JFI046', 'Madu Balita Jasmine X-Tra Propolis', 'JFI', 12500,100),
+('JFI047', 'Madu Hitam Pahit 3 In 1 DIABET isi 350 gr', 'JFI', 6000,1000),
+('JFI048', 'Madu Ostofos (Osteoporosis) isi 350 gr', 'JFI', 6000,1000),
+('JFI049', 'Madu Probiotik (Flek & Batuk) 150gr', 'JFI', 25000,100),
+('JFI050', 'Madu Putih Jasmine (Royal Jelly & Bee Pollen) 350 ', 'JFI', 5000,1000),
+('JFM027', 'Herba Meniran Plus Jasarama', 'JFM', 6000,1000),
+('JFM031', 'Teh Celup Daun Sirsak Jasarama', 'JFM', 32000,100),
+('JFM035', 'Teh Celup Kulit Manggis Jasarama', 'JFM', 35000,100),
+('JFM039', 'Teh Celup Pegagan Plus Jasarama', 'JFM', 3000,1000),
+('JFM043', 'Teh Hijau Asli Cap Daun Mas 75 gram Jasarama', 'JFM', 15000,100),
+('KHO042', 'Madu Hitam Sumbawa Al Khodry', 'KHO', 75000,100),
+('KHO043', 'Minyak Kemiri Premium Al Khodry', 'KHO', 25000,100),
+('KIA025', 'Air Hajar Sa''adah/Jahannam Mesir 3 ml Al Kautsar', 'KIA', 65000,100),
+('KIA026', 'BILQIS CREAM (Pemutih Ketiak dan Selangkangan)', 'KIA', 55000,100),
+('KIA027', 'Breast Up Cream (Pengencang Payudara)', 'KIA', 85000,100),
+('KIA028', 'Ekstrak Tribulus Gold Terrestris', 'KIA', 5000,1000) ]
+
+]
+[ TIME: Sun Jan 11 10:49:54 ICT 2015 ]
+% com.mckoi.database.DatabaseException: The insert data list varies in size.
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:118)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO products VALUES
+('KIA029', 'Hajar Sa''adah Black Stone With Aroma Teraphy', 'KIA', 9000,1000),
+('KIA030', 'Herbal Axilla (Penghilang Bau Badan)', 'KIA', 35000,100),
+('KIA031', 'Humairo Cream Nature', 'KIA', 35000,100),
+('KIA032', 'Kopi Sulthon 7 in 1 (Kopinya Keluarga Harmonis)', 'KIA', 1000,10000),
+('KIA033', 'Ladies Whitening Cream (Pemutih Wajah dan Leher)', 'KIA', 45000,100),
+('KIA034', 'Long Big Enlargement X Nature Oil 6 ml', 'KIA', 2000,10000),
+('KIA035', 'Minyak Bulus Al Kautsar', 'KIA', 25000,100),
+('KIA036', 'Minyak Bulus Plus Al Kautsar', 'KIA', 3000,1000),
+('KIA037', 'Minyak Gosok Sumbawa Asli', 'KIA', 5000,1000),
+('KIA038', 'Permanent Penis Enlargement (Natural Oil)', 'KIA', 12000,1000),
+('KIA039', 'Pil Manjakani (Female Solution)', 'KIA', 95000,100),
+('KIA040', 'Squalene Cream (Cerahkan Kulit Wajah)', 'KIA', 35000,100),
+('KIA041', 'Tongkat Gurah Vagina Super (TGV Super)', 'KIA', 75000,100),
+('KZU576', 'Alat Bekam Biru Kang Zhu 12 Cups', 'KZU', 17000,1000),
+('KZU577', 'Alat Bekam Biru Kang Zhu 24 Cups', 'KZU', 29000,1000),
+('KZU578', 'Alat Bekam Biru Kang Zhu 6 Cups', 'KZU', 9000,1000),
+('KZU579', 'Alat Bekam Kuning Kang Zhu 14 Cups', 'KZU', 32000,1000),
+('KZU580', 'Alat Bekam Kuning Kang Zhu 8 Cups', 'KZU', 2000,10000),
+('MAB064', 'OSaGi (Obat Sakit Gigi)', 'MAB', 35000,100),
+('MAB065', 'OSARI (Obat Sariawan dan Panas Dalam)', 'MAB', 35000,100),
+('MBR017', 'Eury - X (Madu Ginseng Pasak Bumi) Al Mabruroh', 'MBR', 65000,100),
+('MBR018', 'Madu For Mama (Untuk Ibu Menyusui) Al Mabruroh', 'MBR', 6000,1000),
+('MBR019', 'Madu Ibu Hamil Al Mabruroh', 'MBR', 55000,100),
+('MBR020', 'Madu Lebah Emas Bioflavonoid Al Mabruroh', 'MBR', 6000,1000),
+('MBR021', 'Madu Maag Al Mabruroh', 'MBR', 55000,100),
+('MBR022', 'Madu Manggisa (Madu plus Ekstrak Manggis) Al Mabru', 'MBR', 8000,1000),
+('MBR023', 'Madu Penyubur Kandungan Al Mabruroh', 'MBR', 75000,100),
+('MBR024', 'Madu SALAMI (Asam urat + Reumatik) Al Mabruroh', 'MBR', 7000,1000),
+('MBR025', 'COCOMAXI Santan Bubuk', 'MBR', 6000,100),
+('MEN592', 'Madu Propolis Sapu Jagad Plus Royal Jelly & Habbat', 'MEN', 4000,1000),
+('MEN593', 'Mama Honey Bumil', 'MEN', 25000,100),
+('MEN594', 'Mama Honey Busui', 'MEN', 25000,100),
+('MEN595', 'Mama Honey Subur', 'MEN', 25000,100),
+('MEN596', 'Manja Honey', 'MEN', 3000,1000),
+('MEN597', 'Mumtaz Kids Honey', 'MEN', 25000,100),
+('MEN598', 'Ramuan Madu Pedang Arab (Khusus Pria)', 'MEN', 7000,1000),
+('MEN599', 'Soyamil (Susu Herbal Ibu Hamil)', 'MEN', 28000,100),
+('MHE044', 'Afiafit', 'MHE', 6000,1000),
+('MHE045', 'Madu Randu 0.5kg Al-Manar', 'MHE', 4000,1000),
+('MTI051', 'Baby Drops ( Suplemen Tetes Bayi & Anak ) Tasnim 1', 'MTI', 15000,100),
+('MTI052', 'Kapsul Etawana Goats Milk Extra Colostrum Tasnim', 'MTI', 6000,1000),
+('MTI053', 'Kapsul Gamasna Tasnim (Gamat Emas)', 'MTI', 7000,1000),
+('MTI054', 'Kapsul Genius Tasnim (Generasi Hebat & Cerdas)', 'MTI', 35000,100),
+('MTI055', 'Kapsul Gurahna Tasnim (Gurah Modern Tanpa Rasa Sak', 'MTI', 45000,100),
+('MTI056', 'Kapsul Hongna Tasnim (Ekstrak Binahong Plus) 60 ka', 'MTI', 5000,1000),
+('MTI057', 'Kapsul Nisana Tasnim 60 Kapsul', 'MTI', 45000,100),
+('MTI058', 'Kapsul Vitana Tasnim (Sinergi 9 Herbal Berkhasiat ', 'MTI', 6000,1000),
+('MTI059', 'Kapsul Xanthona Tasnim (Ekstrak Kulit Manggis Plus', 'MTI', 5000,1000),
+('MTI060', 'Madu Asina ( Nutrisi Khusus Ibu Menyusui ) Tasnim ', 'MTI', 3000,1000),
+('MTI061', 'Madu Herbal Diabetana Tasnim (Madu Khusus Diabetes', 'MTI', 8000,1000),
+('MTI062', 'Madu Herbal TASNIM 17 in 1', 'MTI', 9000,1000),
+('MTI063', 'Madu Herbal Tasnim Ankana (Madu Herbal Khusus Kank', 'MTI', 1000,10000),
+('MTI064', 'Madu Herbal Tasnim Brain (Madu Kecerdasan)', 'MTI', 7000,1000),
+('MTI065', 'Madu Herbal Tasnim Gamatana (Madu Khusus Regeneras', 'MTI', 8000,1000),
+('MTI066', 'Madu Herbal Tasnim Honey Moon', 'MTI', 8000,1000),
+('MTI067', 'Madu Herbal Zamthona Tasnim', 'MTI', 75000,100),
+('MTI068', 'Madu Kidsna ( Madu Khusus Buah Hati Tercinta ) Tas', 'MTI', 3000,1000),
+('MTI069', 'Minyak Oles Pain Tasnim 30ml (Minyak Oles untuk Ra', 'MTI', 25000,100),
+('MTI070', 'Minyak Oleska Tasnim 15 ml (Minyak Oles Serbaguna)', 'MTI', 15000,100),
+('MUS046', 'Siwak Basah Import Al-Muslim', 'MUS', 12000,100),
+('NAH071', 'Kid''s Honey Complete Protect', 'NAH', 5000,1000),
+('NAH072', 'Madu Hutan plus Spirulina', 'NAH', 4000,1000),
+('NAH073', 'Madu Omega 3', 'NAH', 5000,1000),
+('NAH074', 'Madu Xtamina Radix plus Ginseng Korea dan Tongkat ', 'NAH', 55000,100),
+('NAH075', 'Nigella Propolis 100 Kapsul', 'NAH', 8000,1000),
+('NAH076', 'Spirulina Kid''s Honey Plus Gamat dan Klorofil', 'NAH', 25000,100),
+('NAH077', 'Spirulina kid''s Honey plus Propolis', 'NAH', 25000,100),
+('NAH078', 'Spirulina Madu Stamina (+ Pegagan + Meniran + Pasa', 'NAH', 45000,100),
+('NAH079', 'Walad Honey (+ Kurma + Pegagan + Temulawak dll)', 'NAH', 22000,100),
+('NAH080', 'Walad Honey GOLD', 'NAH', 25000,100),
+('NAH081', 'Walad Honey Premium', 'NAH', 25000,100),
+('NAW028', 'Gamat Gold 60 Kapsul An-Nawa Herba', 'NAW', 7000,1000),
+('NAW029', 'Minyak Daun Sirsak Cytotoxic 100 Kapsul', 'NAW', 55000,100),
+('NAW030', 'Minyak Daun Sirsak Cytotoxic 200 Kapsul', 'NAW', 1000,10000),
+('NAW031', 'Minyak Daun Sirsak Cytotoxic 60 Kapsul', 'NAW', 4000,1000),
+('NAW032', 'Super Garlic Allium Sativum 60 Kapsul', 'NAW', 4000,1000),
+('OIF066', 'Madu Hutan Multiflora 0,5 kg Ath Thoifah', 'OIF', 45000,100),
+('OIF067', 'Madu Hutan Multiflora 1 kg Ath Thoifah', 'OIF', 82000,100),
+('OIF068', 'Madu Hutan Platinum 0,5 kg Ath Thoifah', 'OIF', 49000,100),
+('OIF069', 'Madu Hutan Platinum 1 kg Ath Thoifah', 'OIF', 88000,100),
+('OND026', 'Herba Darah Tinggi Jasarama', 'OND', 6000,1000),
+('OND030', 'Lidah Buaya Instant 250 gram', 'OND', 36000,100),
+('OND034', 'Teh Celup Jati Belanda Jasarama', 'OND', 4000,1000),
+('OND038', 'Teh Celup Murbei Jasarama', 'OND', 3000,1000),
+('OND042', 'Teh Celup Temulawak Jasarama', 'OND', 3000,1000),
+('OQW026', '100 Dosa Yang Diremehkan Wanita', 'QOW', 37000,100),
+('OQW027', 'Bekam Sunnah Nabi dan Mukjizat Medis', 'QOW', 27000,100),
+('OQW028', 'Berbahagialah Sholat Anda Tak Sia-sia', 'QOW', 14900,100),
+('OQW029', 'Bersedekahlah Maka Engkau Akan Kaya', 'QOW', 23900,100),
+('OQW030', 'Fiqih Pengobatan Islami', 'QOW', 35000,100),
+('OQW031', 'Haji Nabi (Sejak Berangkat dari Madinah Hingga Kem', 'QOW', 18900,100),
+('OQW032', 'Ibadah Kurban', 'QOW', 10900,100),
+('OQW033', 'Keajaiban Thibbun Nabawi', 'QOW', 43000,100),
+('OQW034', 'Khasiat Kurma ''Ajwah (Makanan Sehat dan Obat Nabaw', 'QOW', 17000,100),
+('OQW035', 'Misteri Tamu Terakhir', 'QOW', 17400),
+('OQW036', 'Muhasabah (Kiat-kiat Introspeksi Diri Seorang Musl', 'QOW', 12400),
+('OQW037', 'Mukjizat Kesembuhan dalam Jintan Hitam, Madu, Bawa', 'QOW', 14000,100),
+('QUB001', 'Madu Pollen 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB002', 'Madu Putih 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB003', 'Madu Putih 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB004', 'Madu Rambutan 0,5 kg l Qubro', 'QUB', 45000,100),
+('QUB005', 'Madu Rambutan 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB006', 'Madu Rami 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB007', 'Madu Rami 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB008', 'Madu Randu 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB009', 'Madu Randu 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB010', 'Madu Rosella 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB011', 'Madu Rosella 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB012', 'Madu Royal Honey 350 gram Al-Qubro', 'QUB', 6000,1000),
+('QUB013', 'Madu Sarang 0,5 kg Al-Qubro', 'QUB', 85000,100),
+('QUB014', 'Madu Sarang 1 kg Al-Qubro', 'QUB', 12000,1000),
+('QUB015', 'Madu Sengon 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB016', 'Madu Sengon 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB017', 'Madu Songkeling 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB018', 'Madu Songkeling 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB019', 'Madu Stroberi 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB020', 'Madu Stroberi 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB021', 'Madu Sumbawa 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB022', 'Madu Sumbawa 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB023', 'Madu Tawon Gong 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB024', 'Madu Tawon Gong 1 kg al qubro', 'QUB', 65000,100),
+('QUB038', 'Brazil Honey 500 gr Al-Qubro', 'QUB', 15000,1000),
+('QUB039', 'Madu Akasia 0.5 Kg A-Qubro', 'QUB', 45000,100),
+('QUB040', 'Madu Akasia 1 Kg A-Qubro', 'QUB', 65000,100),
+('QUB041', 'Madu Ambon 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB042', 'Madu Ambon 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB043', 'Madu Apel 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB044', 'Madu Apel 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB045', 'Madu Badui 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB046', 'Madu Badui 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB047', 'Madu Belimbing 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB048', 'Madu Belimbing 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB049', 'Madu Durian 0,5 kg al qubro', 'QUB', 45000,100),
+('QUB050', 'Madu Durian 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB051', 'Madu Flores 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB052', 'Madu Flores 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB053', 'Madu Gunung Mutis 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB054', 'Madu Gunung Mutis 1 kg Al qubro', 'QUB', 65000,100),
+('QUB055', 'Madu Gurah Anak (MGA) Al-Qubro', 'QUB', 35000,100),
+('QUB056', 'Madu Gurah Dewasa Al-Qubro', 'QUB', 45000,100),
+('QUB057', 'Madu Hitam 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB058', 'Madu Hitam 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB059', 'Madu Hutan Riau 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB060', 'Madu Hutan Riau 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB061', 'Madu Jambi 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB062', 'Madu Jambi 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB063', 'Madu Jeruk 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB064', 'Madu Jeruk 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB065', 'Madu Kaliandra 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB066', 'Madu Kaliandra Al-Qubro 1kg', 'QUB', 65000,100);
+ ]
+
+]
+[ TIME: Sun Jan 11 10:50:45 ICT 2015 ]
+% com.mckoi.database.DatabaseException: The insert data list varies in size.
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:118)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO products VALUES
+('KIA029', 'Hajar Sa''adah Black Stone With Aroma Teraphy', 'KIA', 9000,1000),
+('KIA030', 'Herbal Axilla (Penghilang Bau Badan)', 'KIA', 35000,100),
+('KIA031', 'Humairo Cream Nature', 'KIA', 35000,100),
+('KIA032', 'Kopi Sulthon 7 in 1 (Kopinya Keluarga Harmonis)', 'KIA', 1000,10000),
+('KIA033', 'Ladies Whitening Cream (Pemutih Wajah dan Leher)', 'KIA', 45000,100),
+('KIA034', 'Long Big Enlargement X Nature Oil 6 ml', 'KIA', 2000,10000),
+('KIA035', 'Minyak Bulus Al Kautsar', 'KIA', 25000,100),
+('KIA036', 'Minyak Bulus Plus Al Kautsar', 'KIA', 3000,1000),
+('KIA037', 'Minyak Gosok Sumbawa Asli', 'KIA', 5000,1000),
+('KIA038', 'Permanent Penis Enlargement (Natural Oil)', 'KIA', 12000,1000),
+('KIA039', 'Pil Manjakani (Female Solution)', 'KIA', 95000,100),
+('KIA040', 'Squalene Cream (Cerahkan Kulit Wajah)', 'KIA', 35000,100),
+('KIA041', 'Tongkat Gurah Vagina Super (TGV Super)', 'KIA', 75000,100),
+('KZU576', 'Alat Bekam Biru Kang Zhu 12 Cups', 'KZU', 17000,1000),
+('KZU577', 'Alat Bekam Biru Kang Zhu 24 Cups', 'KZU', 29000,1000),
+('KZU578', 'Alat Bekam Biru Kang Zhu 6 Cups', 'KZU', 9000,1000),
+('KZU579', 'Alat Bekam Kuning Kang Zhu 14 Cups', 'KZU', 32000,1000),
+('KZU580', 'Alat Bekam Kuning Kang Zhu 8 Cups', 'KZU', 2000,10000),
+('MAB064', 'OSaGi (Obat Sakit Gigi)', 'MAB', 35000,100),
+('MAB065', 'OSARI (Obat Sariawan dan Panas Dalam)', 'MAB', 35000,100),
+('MBR017', 'Eury - X (Madu Ginseng Pasak Bumi) Al Mabruroh', 'MBR', 65000,100),
+('MBR018', 'Madu For Mama (Untuk Ibu Menyusui) Al Mabruroh', 'MBR', 6000,1000),
+('MBR019', 'Madu Ibu Hamil Al Mabruroh', 'MBR', 55000,100),
+('MBR020', 'Madu Lebah Emas Bioflavonoid Al Mabruroh', 'MBR', 6000,1000),
+('MBR021', 'Madu Maag Al Mabruroh', 'MBR', 55000,100),
+('MBR022', 'Madu Manggisa (Madu plus Ekstrak Manggis) Al Mabru', 'MBR', 8000,1000),
+('MBR023', 'Madu Penyubur Kandungan Al Mabruroh', 'MBR', 75000,100),
+('MBR024', 'Madu SALAMI (Asam urat + Reumatik) Al Mabruroh', 'MBR', 7000,1000),
+('MBR025', 'COCOMAXI Santan Bubuk', 'MBR', 6000,100),
+('MEN592', 'Madu Propolis Sapu Jagad Plus Royal Jelly & Habbat', 'MEN', 4000,1000),
+('MEN593', 'Mama Honey Bumil', 'MEN', 25000,100),
+('MEN594', 'Mama Honey Busui', 'MEN', 25000,100),
+('MEN595', 'Mama Honey Subur', 'MEN', 25000,100),
+('MEN596', 'Manja Honey', 'MEN', 3000,1000),
+('MEN597', 'Mumtaz Kids Honey', 'MEN', 25000,100),
+('MEN598', 'Ramuan Madu Pedang Arab (Khusus Pria)', 'MEN', 7000,1000),
+('MEN599', 'Soyamil (Susu Herbal Ibu Hamil)', 'MEN', 28000,100),
+('MHE044', 'Afiafit', 'MHE', 6000,1000),
+('MHE045', 'Madu Randu 0.5kg Al-Manar', 'MHE', 4000,1000),
+('MTI051', 'Baby Drops ( Suplemen Tetes Bayi & Anak ) Tasnim 1', 'MTI', 15000,100),
+('MTI052', 'Kapsul Etawana Goats Milk Extra Colostrum Tasnim', 'MTI', 6000,1000),
+('MTI053', 'Kapsul Gamasna Tasnim (Gamat Emas)', 'MTI', 7000,1000),
+('MTI054', 'Kapsul Genius Tasnim (Generasi Hebat & Cerdas)', 'MTI', 35000,100),
+('MTI055', 'Kapsul Gurahna Tasnim (Gurah Modern Tanpa Rasa Sak', 'MTI', 45000,100),
+('MTI056', 'Kapsul Hongna Tasnim (Ekstrak Binahong Plus) 60 ka', 'MTI', 5000,1000),
+('MTI057', 'Kapsul Nisana Tasnim 60 Kapsul', 'MTI', 45000,100),
+('MTI058', 'Kapsul Vitana Tasnim (Sinergi 9 Herbal Berkhasiat ', 'MTI', 6000,1000),
+('MTI059', 'Kapsul Xanthona Tasnim (Ekstrak Kulit Manggis Plus', 'MTI', 5000,1000),
+('MTI060', 'Madu Asina ( Nutrisi Khusus Ibu Menyusui ) Tasnim ', 'MTI', 3000,1000),
+('MTI061', 'Madu Herbal Diabetana Tasnim (Madu Khusus Diabetes', 'MTI', 8000,1000),
+('MTI062', 'Madu Herbal TASNIM 17 in 1', 'MTI', 9000,1000),
+('MTI063', 'Madu Herbal Tasnim Ankana (Madu Herbal Khusus Kank', 'MTI', 1000,10000),
+('MTI064', 'Madu Herbal Tasnim Brain (Madu Kecerdasan)', 'MTI', 7000,1000),
+('MTI065', 'Madu Herbal Tasnim Gamatana (Madu Khusus Regeneras', 'MTI', 8000,1000),
+('MTI066', 'Madu Herbal Tasnim Honey Moon', 'MTI', 8000,1000),
+('MTI067', 'Madu Herbal Zamthona Tasnim', 'MTI', 75000,100),
+('MTI068', 'Madu Kidsna ( Madu Khusus Buah Hati Tercinta ) Tas', 'MTI', 3000,1000),
+('MTI069', 'Minyak Oles Pain Tasnim 30ml (Minyak Oles untuk Ra', 'MTI', 25000,100),
+('MTI070', 'Minyak Oleska Tasnim 15 ml (Minyak Oles Serbaguna)', 'MTI', 15000,100),
+('MUS046', 'Siwak Basah Import Al-Muslim', 'MUS', 12000,100),
+('NAH071', 'Kid''s Honey Complete Protect', 'NAH', 5000,1000),
+('NAH072', 'Madu Hutan plus Spirulina', 'NAH', 4000,1000),
+('NAH073', 'Madu Omega 3', 'NAH', 5000,1000),
+('NAH074', 'Madu Xtamina Radix plus Ginseng Korea dan Tongkat ', 'NAH', 55000,100),
+('NAH075', 'Nigella Propolis 100 Kapsul', 'NAH', 8000,1000),
+('NAH076', 'Spirulina Kid''s Honey Plus Gamat dan Klorofil', 'NAH', 25000,100),
+('NAH077', 'Spirulina kid''s Honey plus Propolis', 'NAH', 25000,100),
+('NAH078', 'Spirulina Madu Stamina (+ Pegagan + Meniran + Pasa', 'NAH', 45000,100),
+('NAH079', 'Walad Honey (+ Kurma + Pegagan + Temulawak dll)', 'NAH', 22000,100),
+('NAH080', 'Walad Honey GOLD', 'NAH', 25000,100),
+('NAH081', 'Walad Honey Premium', 'NAH', 25000,100),
+('NAW028', 'Gamat Gold 60 Kapsul An-Nawa Herba', 'NAW', 7000,1000),
+('NAW029', 'Minyak Daun Sirsak Cytotoxic 100 Kapsul', 'NAW', 55000,100),
+('NAW030', 'Minyak Daun Sirsak Cytotoxic 200 Kapsul', 'NAW', 1000,10000),
+('NAW031', 'Minyak Daun Sirsak Cytotoxic 60 Kapsul', 'NAW', 4000,1000),
+('NAW032', 'Super Garlic Allium Sativum 60 Kapsul', 'NAW', 4000,1000),
+('OIF066', 'Madu Hutan Multiflora 0,5 kg Ath Thoifah', 'OIF', 45000,100),
+('OIF067', 'Madu Hutan Multiflora 1 kg Ath Thoifah', 'OIF', 82000,100),
+('OIF068', 'Madu Hutan Platinum 0,5 kg Ath Thoifah', 'OIF', 49000,100),
+('OIF069', 'Madu Hutan Platinum 1 kg Ath Thoifah', 'OIF', 88000,100),
+('OND026', 'Herba Darah Tinggi Jasarama', 'OND', 6000,1000),
+('OND030', 'Lidah Buaya Instant 250 gram', 'OND', 36000,100),
+('OND034', 'Teh Celup Jati Belanda Jasarama', 'OND', 4000,1000),
+('OND038', 'Teh Celup Murbei Jasarama', 'OND', 3000,1000),
+('OND042', 'Teh Celup Temulawak Jasarama', 'OND', 3000,1000),
+('OQW026', '100 Dosa Yang Diremehkan Wanita', 'QOW', 37000,100),
+('OQW027', 'Bekam Sunnah Nabi dan Mukjizat Medis', 'QOW', 27000,100),
+('OQW028', 'Berbahagialah Sholat Anda Tak Sia-sia', 'QOW', 14900,100),
+('OQW029', 'Bersedekahlah Maka Engkau Akan Kaya', 'QOW', 23900,100),
+('OQW030', 'Fiqih Pengobatan Islami', 'QOW', 35000,100),
+('OQW031', 'Haji Nabi (Sejak Berangkat dari Madinah Hingga Kem', 'QOW', 18900,100),
+('OQW032', 'Ibadah Kurban', 'QOW', 10900,100),
+('OQW033', 'Keajaiban Thibbun Nabawi', 'QOW', 43000,100),
+('OQW034', 'Khasiat Kurma ''Ajwah (Makanan Sehat dan Obat Nabaw', 'QOW', 17000,100),
+('OQW035', 'Misteri Tamu Terakhir', 'QOW', 17400),
+('OQW036', 'Muhasabah (Kiat-kiat Introspeksi Diri Seorang Musl', 'QOW', 12400),
+('OQW037', 'Mukjizat Kesembuhan dalam Jintan Hitam, Madu, Bawa', 'QOW', 14000,100),
+('QUB001', 'Madu Pollen 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB002', 'Madu Putih 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB003', 'Madu Putih 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB004', 'Madu Rambutan 0,5 kg l Qubro', 'QUB', 45000,100),
+('QUB005', 'Madu Rambutan 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB006', 'Madu Rami 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB007', 'Madu Rami 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB008', 'Madu Randu 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB009', 'Madu Randu 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB010', 'Madu Rosella 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB011', 'Madu Rosella 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB012', 'Madu Royal Honey 350 gram Al-Qubro', 'QUB', 6000,1000),
+('QUB013', 'Madu Sarang 0,5 kg Al-Qubro', 'QUB', 85000,100),
+('QUB014', 'Madu Sarang 1 kg Al-Qubro', 'QUB', 12000,1000),
+('QUB015', 'Madu Sengon 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB016', 'Madu Sengon 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB017', 'Madu Songkeling 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB018', 'Madu Songkeling 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB019', 'Madu Stroberi 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB020', 'Madu Stroberi 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB021', 'Madu Sumbawa 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB022', 'Madu Sumbawa 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB023', 'Madu Tawon Gong 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB024', 'Madu Tawon Gong 1 kg al qubro', 'QUB', 65000,100),
+('QUB038', 'Brazil Honey 500 gr Al-Qubro', 'QUB', 15000,1000),
+('QUB039', 'Madu Akasia 0.5 Kg A-Qubro', 'QUB', 45000,100),
+('QUB040', 'Madu Akasia 1 Kg A-Qubro', 'QUB', 65000,100),
+('QUB041', 'Madu Ambon 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB042', 'Madu Ambon 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB043', 'Madu Apel 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB044', 'Madu Apel 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB045', 'Madu Badui 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB046', 'Madu Badui 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB047', 'Madu Belimbing 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB048', 'Madu Belimbing 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB049', 'Madu Durian 0,5 kg al qubro', 'QUB', 45000,100),
+('QUB050', 'Madu Durian 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB051', 'Madu Flores 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB052', 'Madu Flores 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB053', 'Madu Gunung Mutis 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB054', 'Madu Gunung Mutis 1 kg Al qubro', 'QUB', 65000,100),
+('QUB055', 'Madu Gurah Anak (MGA) Al-Qubro', 'QUB', 35000,100),
+('QUB056', 'Madu Gurah Dewasa Al-Qubro', 'QUB', 45000,100),
+('QUB057', 'Madu Hitam 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB058', 'Madu Hitam 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB059', 'Madu Hutan Riau 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB060', 'Madu Hutan Riau 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB061', 'Madu Jambi 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB062', 'Madu Jambi 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB063', 'Madu Jeruk 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB064', 'Madu Jeruk 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB065', 'Madu Kaliandra 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB066', 'Madu Kaliandra Al-Qubro 1kg', 'QUB', 65000,100);
+INSERT INTO products VALUES
+('KIA029', 'Hajar Sa''adah Black Stone With Aroma Teraphy', 'KIA', 9000,1000),
+('KIA030', 'Herbal Axilla (Penghilang Bau Badan)', 'KIA', 35000,100),
+('KIA031', 'Humairo Cream Nature', 'KIA', 35000,100),
+('KIA032', 'Kopi Sulthon 7 in 1 (Kopinya Keluarga Harmonis)', 'KIA', 1000,10000),
+('KIA033', 'Ladies Whitening Cream (Pemutih Wajah dan Leher)', 'KIA', 45000,100),
+('KIA034', 'Long Big Enlargement X Nature Oil 6 ml', 'KIA', 2000,10000),
+('KIA035', 'Minyak Bulus Al Kautsar', 'KIA', 25000,100),
+('KIA036', 'Minyak Bulus Plus Al Kautsar', 'KIA', 3000,1000),
+('KIA037', 'Minyak Gosok Sumbawa Asli', 'KIA', 5000,1000),
+('KIA038', 'Permanent Penis Enlargement (Natural Oil)', 'KIA', 12000,1000),
+('KIA039', 'Pil Manjakani (Female Solution)', 'KIA', 95000,100),
+('KIA040', 'Squalene Cream (Cerahkan Kulit Wajah)', 'KIA', 35000,100),
+('KIA041', 'Tongkat Gurah Vagina Super (TGV Super)', 'KIA', 75000,100),
+('KZU576', 'Alat Bekam Biru Kang Zhu 12 Cups', 'KZU', 17000,1000),
+('KZU577', 'Alat Bekam Biru Kang Zhu 24 Cups', 'KZU', 29000,1000),
+('KZU578', 'Alat Bekam Biru Kang Zhu 6 Cups', 'KZU', 9000,1000),
+('KZU579', 'Alat Bekam Kuning Kang Zhu 14 Cups', 'KZU', 32000,1000),
+('KZU580', 'Alat Bekam Kuning Kang Zhu 8 Cups', 'KZU', 2000,10000),
+('MAB064', 'OSaGi (Obat Sakit Gigi)', 'MAB', 35000,100),
+('MAB065', 'OSARI (Obat Sariawan dan Panas Dalam)', 'MAB', 35000,100),
+('MBR017', 'Eury - X (Madu Ginseng Pasak Bumi) Al Mabruroh', 'MBR', 65000,100),
+('MBR018', 'Madu For Mama (Untuk Ibu Menyusui) Al Mabruroh', 'MBR', 6000,1000),
+('MBR019', 'Madu Ibu Hamil Al Mabruroh', 'MBR', 55000,100),
+('MBR020', 'Madu Lebah Emas Bioflavonoid Al Mabruroh', 'MBR', 6000,1000),
+('MBR021', 'Madu Maag Al Mabruroh', 'MBR', 55000,100),
+('MBR022', 'Madu Manggisa (Madu plus Ekstrak Manggis) Al Mabru', 'MBR', 8000,1000),
+('MBR023', 'Madu Penyubur Kandungan Al Mabruroh', 'MBR', 75000,100),
+('MBR024', 'Madu SALAMI (Asam urat + Reumatik) Al Mabruroh', 'MBR', 7000,1000),
+('MBR025', 'COCOMAXI Santan Bubuk', 'MBR', 6000,100),
+('MEN592', 'Madu Propolis Sapu Jagad Plus Royal Jelly & Habbat', 'MEN', 4000,1000),
+('MEN593', 'Mama Honey Bumil', 'MEN', 25000,100),
+('MEN594', 'Mama Honey Busui', 'MEN', 25000,100),
+('MEN595', 'Mama Honey Subur', 'MEN', 25000,100),
+('MEN596', 'Manja Honey', 'MEN', 3000,1000),
+('MEN597', 'Mumtaz Kids Honey', 'MEN', 25000,100),
+('MEN598', 'Ramuan Madu Pedang Arab (Khusus Pria)', 'MEN', 7000,1000),
+('MEN599', 'Soyamil (Susu Herbal Ibu Hamil)', 'MEN', 28000,100),
+('MHE044', 'Afiafit', 'MHE', 6000,1000),
+('MHE045', 'Madu Randu 0.5kg Al-Manar', 'MHE', 4000,1000),
+('MTI051', 'Baby Drops ( Suplemen Tetes Bayi & Anak ) Tasnim 1', 'MTI', 15000,100),
+('MTI052', 'Kapsul Etawana Goats Milk Extra Colostrum Tasnim', 'MTI', 6000,1000),
+('MTI053', 'Kapsul Gamasna Tasnim (Gamat Emas)', 'MTI', 7000,1000),
+('MTI054', 'Kapsul Genius Tasnim (Generasi Hebat & Cerdas)', 'MTI', 35000,100),
+('MTI055', 'Kapsul Gurahna Tasnim (Gurah Modern Tanpa Rasa Sak', 'MTI', 45000,100),
+('MTI056', 'Kapsul Hongna Tasnim (Ekstrak Binahong Plus) 60 ka', 'MTI', 5000,1000),
+('MTI057', 'Kapsul Nisana Tasnim 60 Kapsul', 'MTI', 45000,100),
+('MTI058', 'Kapsul Vitana Tasnim (Sinergi 9 Herbal Berkhasiat ', 'MTI', 6000,1000),
+('MTI059', 'Kapsul Xanthona Tasnim (Ekstrak Kulit Manggis Plus', 'MTI', 5000,1000),
+('MTI060', 'Madu Asina ( Nutrisi Khusus Ibu Menyusui ) Tasnim ', 'MTI', 3000,1000),
+('MTI061', 'Madu Herbal Diabetana Tasnim (Madu Khusus Diabetes', 'MTI', 8000,1000),
+('MTI062', 'Madu Herbal TASNIM 17 in 1', 'MTI', 9000,1000),
+('MTI063', 'Madu Herbal Tasnim Ankana (Madu Herbal Khusus Kank', 'MTI', 1000,10000),
+('MTI064', 'Madu Herbal Tasnim Brain (Madu Kecerdasan)', 'MTI', 7000,1000),
+('MTI065', 'Madu Herbal Tasnim Gamatana (Madu Khusus Regeneras', 'MTI', 8000,1000),
+('MTI066', 'Madu Herbal Tasnim Honey Moon', 'MTI', 8000,1000),
+('MTI067', 'Madu Herbal Zamthona Tasnim', 'MTI', 75000,100),
+('MTI068', 'Madu Kidsna ( Madu Khusus Buah Hati Tercinta ) Tas', 'MTI', 3000,1000),
+('MTI069', 'Minyak Oles Pain Tasnim 30ml (Minyak Oles untuk Ra', 'MTI', 25000,100),
+('MTI070', 'Minyak Oleska Tasnim 15 ml (Minyak Oles Serbaguna)', 'MTI', 15000,100),
+('MUS046', 'Siwak Basah Import Al-Muslim', 'MUS', 12000,100),
+('NAH071', 'Kid''s Honey Complete Protect', 'NAH', 5000,1000),
+('NAH072', 'Madu Hutan plus Spirulina', 'NAH', 4000,1000),
+('NAH073', 'Madu Omega 3', 'NAH', 5000,1000),
+('NAH074', 'Madu Xtamina Radix plus Ginseng Korea dan Tongkat ', 'NAH', 55000,100),
+('NAH075', 'Nigella Propolis 100 Kapsul', 'NAH', 8000,1000),
+('NAH076', 'Spirulina Kid''s Honey Plus Gamat dan Klorofil', 'NAH', 25000,100),
+('NAH077', 'Spirulina kid''s Honey plus Propolis', 'NAH', 25000,100),
+('NAH078', 'Spirulina Madu Stamina (+ Pegagan + Meniran + Pasa', 'NAH', 45000,100),
+('NAH079', 'Walad Honey (+ Kurma + Pegagan + Temulawak dll)', 'NAH', 22000,100),
+('NAH080', 'Walad Honey GOLD', 'NAH', 25000,100),
+('NAH081', 'Walad Honey Premium', 'NAH', 25000,100),
+('NAW028', 'Gamat Gold 60 Kapsul An-Nawa Herba', 'NAW', 7000,1000),
+('NAW029', 'Minyak Daun Sirsak Cytotoxic 100 Kapsul', 'NAW', 55000,100),
+('NAW030', 'Minyak Daun Sirsak Cytotoxic 200 Kapsul', 'NAW', 1000,10000),
+('NAW031', 'Minyak Daun Sirsak Cytotoxic 60 Kapsul', 'NAW', 4000,1000),
+('NAW032', 'Super Garlic Allium Sativum 60 Kapsul', 'NAW', 4000,1000),
+('OIF066', 'Madu Hutan Multiflora 0,5 kg Ath Thoifah', 'OIF', 45000,100),
+('OIF067', 'Madu Hutan Multiflora 1 kg Ath Thoifah', 'OIF', 82000,100),
+('OIF068', 'Madu Hutan Platinum 0,5 kg Ath Thoifah', 'OIF', 49000,100),
+('OIF069', 'Madu Hutan Platinum 1 kg Ath Thoifah', 'OIF', 88000,100),
+('OND026', 'Herba Darah Tinggi Jasarama', 'OND', 6000,1000),
+('OND030', 'Lidah Buaya Instant 250 gram', 'OND', 36000,100),
+('OND034', 'Teh Celup Jati Belanda Jasarama', 'OND', 4000,1000),
+('OND038', 'Teh Celup Murbei Jasarama', 'OND', 3000,1000),
+('OND042', 'Teh Celup Temulawak Jasarama', 'OND', 3000,1000),
+('OQW026', '100 Dosa Yang Diremehkan Wanita', 'QOW', 37000,100),
+('OQW027', 'Bekam Sunnah Nabi dan Mukjizat Medis', 'QOW', 27000,100),
+('OQW028', 'Berbahagialah Sholat Anda Tak Sia-sia', 'QOW', 14900,100),
+('OQW029', 'Bersedekahlah Maka Engkau Akan Kaya', 'QOW', 23900,100),
+('OQW030', 'Fiqih Pengobatan Islami', 'QOW', 35000,100) ]
+
+]
+[ TIME: Sun Jan 11 10:51:07 ICT 2015 ]
+% com.mckoi.database.DatabaseException: The insert data list varies in size.
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:118)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+[ TIME: Sun Jan 11 10:52:05 ICT 2015 ]
+% com.mckoi.database.sql.ParseException: Encountered "," at line 1, column 28.
+Was expecting:
+    "(" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.InsertDataList(SQL.java:1726)
+	at com.mckoi.database.sql.SQL.Insert(SQL.java:972)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:183)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO products VALUES
+('OQW035', 'Misteri Tamu Terakhir', 'QOW', 17400,100),
+('OQW036', 'Muhasabah (Kiat-kiat Introspeksi Diri Seorang Musl', 'QOW', 12400),
+('OQW037', 'Mukjizat Kesembuhan dalam Jintan Hitam, Madu, Bawa', 'QOW', 14000,100),
+('QUB001', 'Madu Pollen 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB002', 'Madu Putih 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB003', 'Madu Putih 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB004', 'Madu Rambutan 0,5 kg l Qubro', 'QUB', 45000,100),
+('QUB005', 'Madu Rambutan 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB006', 'Madu Rami 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB007', 'Madu Rami 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB008', 'Madu Randu 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB009', 'Madu Randu 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB010', 'Madu Rosella 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB011', 'Madu Rosella 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB012', 'Madu Royal Honey 350 gram Al-Qubro', 'QUB', 6000,1000),
+('QUB013', 'Madu Sarang 0,5 kg Al-Qubro', 'QUB', 85000,100),
+('QUB014', 'Madu Sarang 1 kg Al-Qubro', 'QUB', 12000,1000),
+('QUB015', 'Madu Sengon 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB016', 'Madu Sengon 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB017', 'Madu Songkeling 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB018', 'Madu Songkeling 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB019', 'Madu Stroberi 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB020', 'Madu Stroberi 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB021', 'Madu Sumbawa 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB022', 'Madu Sumbawa 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB023', 'Madu Tawon Gong 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB024', 'Madu Tawon Gong 1 kg al qubro', 'QUB', 65000,100),
+('QUB038', 'Brazil Honey 500 gr Al-Qubro', 'QUB', 15000,1000),
+('QUB039', 'Madu Akasia 0.5 Kg A-Qubro', 'QUB', 45000,100),
+('QUB040', 'Madu Akasia 1 Kg A-Qubro', 'QUB', 65000,100),
+('QUB041', 'Madu Ambon 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB042', 'Madu Ambon 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB043', 'Madu Apel 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB044', 'Madu Apel 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB045', 'Madu Badui 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB046', 'Madu Badui 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB047', 'Madu Belimbing 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB048', 'Madu Belimbing 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB049', 'Madu Durian 0,5 kg al qubro', 'QUB', 45000,100),
+('QUB050', 'Madu Durian 1 kg Al Qubro', 'QUB', 65000,100),
+('QUB051', 'Madu Flores 0,5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB052', 'Madu Flores 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB053', 'Madu Gunung Mutis 0,5 kg Al Qubro', 'QUB', 45000,100),
+('QUB054', 'Madu Gunung Mutis 1 kg Al qubro', 'QUB', 65000,100),
+('QUB055', 'Madu Gurah Anak (MGA) Al-Qubro', 'QUB', 35000,100),
+('QUB056', 'Madu Gurah Dewasa Al-Qubro', 'QUB', 45000,100),
+('QUB057', 'Madu Hitam 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB058', 'Madu Hitam 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB059', 'Madu Hutan Riau 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB060', 'Madu Hutan Riau 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB061', 'Madu Jambi 0.5 kg Al-Qubro', 'QUB', 45000,100),
+('QUB062', 'Madu Jambi 1 kg Al-Qubro', 'QUB', 65000,100),
+('QUB063', 'Madu Jeruk 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB064', 'Madu Jeruk 1 Kg Al-Qubro', 'QUB', 65000,100),
+('QUB065', 'Madu Kaliandra 0.5 Kg Al-Qubro', 'QUB', 45000,100),
+('QUB066', 'Madu Kaliandra Al-Qubro 1kg', 'QUB', 65000,100);
+ ]
+
+]
+[ TIME: Sun Jan 11 10:52:33 ICT 2015 ]
+% com.mckoi.database.DatabaseException: The insert data list varies in size.
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:118)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO detilTransaksi VALUES(2, 'ABE013', 1) ]
+
+]
+[ TIME: Sun Jan 11 12:29:02 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Table 'APP.detilTransaksi' does not exist.
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:126)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO detilTransaksi VALUES(2, 'ABE013', 1) ]
+
+]
+[ TIME: Sun Jan 11 12:29:05 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Table 'APP.detilTransaksi' does not exist.
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:126)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO detilTransaksi VALUES(2, 'ABE013', 1) ]
+
+]
+[ TIME: Sun Jan 11 12:29:06 ICT 2015 ]
+% com.mckoi.database.DatabaseException: Table 'APP.detilTransaksi' does not exist.
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:126)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO detilTransaksi VALUES(3, 'ABE007', 1) ]
+
+]
+[ TIME: Sun Jan 11 12:32:45 ICT 2015 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_17) Columns = ( NOtransID ) Table = ( APP.detilTransaksi )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:261)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO detilTransaksi VALUES(3, 'ABE007', 1) ]
+
+]
+[ TIME: Sun Jan 11 12:32:50 ICT 2015 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_17) Columns = ( NOtransID ) Table = ( APP.detilTransaksi )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:261)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO detilTransaksi VALUES(4, 'ABE007', 1) ]
+
+]
+[ TIME: Sun Jan 11 12:33:05 ICT 2015 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_17) Columns = ( NOtransID ) Table = ( APP.detilTransaksi )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:261)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+**** Debug log started: Sun Jan 11 13:16:52 ICT 2015 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: java.util.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: .\data\DefaultDatabase.lock
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO products VALUES('sss','sss','ABE',1,22) ]
+
+]
+[ TIME: Sun Jan 11 14:56:32 ICT 2015 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_16) Columns = ( ID ) Table = ( APP.products )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:261)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO products VALUES('sss','sss','ABE',1,1) ]
+
+]
+[ TIME: Sun Jan 11 14:56:52 ICT 2015 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_16) Columns = ( ID ) Table = ( APP.products )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:261)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO users VALUES('sss','sss','true') ]
+
+]
+[ TIME: Sun Jan 11 15:08:05 ICT 2015 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_11) Columns = ( username ) Table = ( APP.users )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:261)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO supplier VALUES('aaa','aaa') ]
+
+]
+[ TIME: Sun Jan 11 16:58:12 ICT 2015 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_13) Columns = ( IDSupplier ) Table = ( APP.supplier )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:261)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$ClientThread$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+**** Debug log started: Sun Jan 11 17:48:06 ICT 2015 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: java.util.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: .\data\DefaultDatabase.lock
